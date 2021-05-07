@@ -1,0 +1,21 @@
+{
+	"ForceUpdateGame": false,
+
+	"LatestGameVersion": "0.1.0",
+	
+	"InternalGameVersion": 1,
+	
+	"InternalResourceVersion": 3,
+	
+	"UpdatePrefixUri": "http://10.21.0.49:8880/ServerAssetbundle/Windows/Resources/",
+	
+	"VersionListLength": 4290,
+	
+	"VersionListHashCode": -1559151070,
+	
+	"VersionListCompressedLength": 1813,
+	
+	"VersionListCompressedHashCode": -392944047,
+	
+	"END_OF_JSON": ""
+}

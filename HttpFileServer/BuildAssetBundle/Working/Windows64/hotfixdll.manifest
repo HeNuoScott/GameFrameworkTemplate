@@ -1,0 +1,18 @@
+ManifestFileVersion: 0
+CRC: 3139949146
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: e8dfe20bef67f8d14d1bf00c47bef5c0
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 5ad585dd02dfb5016c0dad519eab8f49
+HashAppended: 0
+ClassTypes:
+- Class: 49
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/GameMain/HotfixDll/Project.Hotfix.dll.bytes
+- Assets/GameMain/HotfixDll/Project.Hotfix.pdb.bytes
+Dependencies: []

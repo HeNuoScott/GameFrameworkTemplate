@@ -1,0 +1,21 @@
+ManifestFileVersion: 0
+CRC: 3628257359
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: b956c36ba4b54da9ea98ebe71c3d5663
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9a2ca7bdbd1871f7131daf57de908e0c
+HashAppended: 0
+ClassTypes:
+- Class: 83
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/GameMain/Sounds/weapon_player.wav
+- Assets/GameMain/Sounds/weapon_enemy.wav
+- Assets/GameMain/Sounds/explosion_player.wav
+- Assets/GameMain/Sounds/explosion_enemy.wav
+- Assets/GameMain/Sounds/explosion_asteroid.wav
+Dependencies: []

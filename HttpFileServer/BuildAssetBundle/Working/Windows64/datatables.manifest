@@ -1,0 +1,38 @@
+ManifestFileVersion: 0
+CRC: 2360680791
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: c0d5bad0cb1dcb79ea68125772987ee1
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 5ad585dd02dfb5016c0dad519eab8f49
+HashAppended: 0
+ClassTypes:
+- Class: 49
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/GameMain/DataTables/Aircraft.txt
+- Assets/GameMain/DataTables/Weapon.bytes
+- Assets/GameMain/DataTables/Entity.bytes
+- Assets/GameMain/DataTables/UIForm.txt
+- Assets/GameMain/DataTables/Sound.bytes
+- Assets/GameMain/DataTables/UISound.txt
+- Assets/GameMain/DataTables/Music.bytes
+- Assets/GameMain/DataTables/Entity.txt
+- Assets/GameMain/DataTables/Armor.txt
+- Assets/GameMain/DataTables/UISound.bytes
+- Assets/GameMain/DataTables/Scene.bytes
+- Assets/GameMain/DataTables/Thruster.txt
+- Assets/GameMain/DataTables/UIForm.bytes
+- Assets/GameMain/DataTables/Asteroid.txt
+- Assets/GameMain/DataTables/Armor.bytes
+- Assets/GameMain/DataTables/Sound.txt
+- Assets/GameMain/DataTables/Scene.txt
+- Assets/GameMain/DataTables/Thruster.bytes
+- Assets/GameMain/DataTables/Asteroid.bytes
+- Assets/GameMain/DataTables/Weapon.txt
+- Assets/GameMain/DataTables/Music.txt
+- Assets/GameMain/DataTables/Aircraft.bytes
+Dependencies: []
