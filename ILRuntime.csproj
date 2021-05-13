@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{98A1D600-BDAF-4FA4-3A3A-90C943E0E529}</ProjectGuid>
+    <ProjectGuid>{29096ADE-E408-EFF5-F56A-5E382A733088}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>ILRuntime</AssemblyName>
@@ -769,11 +769,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{E0E668BA-12CD-FA94-B561-DF4394CFD389}</Project>
+      <Project>{A6E2EB8B-7C00-F448-6477-BE1643B4513B}</Project>
       <Name>UnityEditor.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{867D1D42-DB4A-FA16-E7C6-B5B1ADC0BAE9}</Project>
+      <Project>{665DC306-358F-04C7-45FC-524A429D87F1}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
   </ItemGroup>

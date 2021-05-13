@@ -19,3 +19,10 @@ E:\WorkSpace\GameFramework\SiriusFramework_ILRuntime\Project.Hotfix\obj\Debug\Pr
 E:\WorkSpace\GameFramework\SiriusFramework_ILRuntime\Project.Hotfix\obj\Debug\Project.Hotfix.csproj.CopyComplete
 E:\WorkSpace\GameFramework\SiriusFramework_ILRuntime\Project.Hotfix\obj\Debug\Project.Hotfix.dll
 E:\WorkSpace\GameFramework\SiriusFramework_ILRuntime\Project.Hotfix\obj\Debug\Project.Hotfix.pdb
+E:\WorkSpace\GameFramework\GF_ILRuntime\Library\ScriptAssemblies\Project.Hotfix.dll
+E:\WorkSpace\GameFramework\GF_ILRuntime\Library\ScriptAssemblies\Project.Hotfix.pdb
+E:\WorkSpace\GameFramework\GF_ILRuntime\Project.Hotfix\obj\Debug\Project.Hotfix.csprojAssemblyReference.cache
+E:\WorkSpace\GameFramework\GF_ILRuntime\Project.Hotfix\obj\Debug\Project.Hotfix.csproj.CoreCompileInputs.cache
+E:\WorkSpace\GameFramework\GF_ILRuntime\Project.Hotfix\obj\Debug\Project.Hotfix.csproj.CopyComplete
+E:\WorkSpace\GameFramework\GF_ILRuntime\Project.Hotfix\obj\Debug\Project.Hotfix.dll
+E:\WorkSpace\GameFramework\GF_ILRuntime\Project.Hotfix\obj\Debug\Project.Hotfix.pdb

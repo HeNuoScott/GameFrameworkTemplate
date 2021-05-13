@@ -81,6 +81,47 @@ namespace Project.Hotfix
             return uiform.Logic as UGUIForm;
         }
 
+        //获取界面
+        public static UIFormBase GetHotUIForm(this UIComponent uiComponent, UIFormID uiFormId, string uiGroupName = null)
+        {
+            return uiComponent.GetHotUIForm((int)uiFormId, uiGroupName);
+        }
+
+        //获取界面
+        public static UIFormBase GetHotUIForm(this UIComponent uiComponent, int uiFormId, string uiGroupName = null)
+        {
+            //获取界面配置表数据
+            IDataTable<DRUIForm> dtUIForm = GameEntry.DataTable.GetDataTable<DRUIForm>();
+            DRUIForm drUIForm = dtUIForm.GetDataRow(uiFormId);
+            if (drUIForm == null)
+                return null;
+
+            //获取界面资源路径
+            string assetName = AssetUtility.GetUIFormAsset(drUIForm.AssetName);
+
+            UIForm uiform = null;
+            //界面组名为空则直接获取界面
+            if (string.IsNullOrEmpty(uiGroupName))
+            {
+                uiform = uiComponent.GetUIForm(assetName);
+                if (uiform == null)
+                    return null;
+            }
+            else
+            {
+                IUIGroup group = uiComponent.GetUIGroup(uiGroupName);
+                if (group == null)
+                    return null;
+
+                uiform = group.GetUIForm(assetName) as UIForm;
+            }
+
+            if (uiform == null)
+                return null;
+            HotUIForm UIForm = uiform.Logic as HotUIForm;
+            return UIForm.HotLogicInstance as UIFormBase;
+        }
+
         //打开界面
         public static int? OpenUIForm(this UIComponent uiComponent, UIFormID uiFormId, object userData = null)
         {
@@ -91,6 +132,12 @@ namespace Project.Hotfix
         public static void CloseUIForm(this UIComponent uiComponent, UGUIForm uiForm)
         {
             uiComponent.CloseUIForm(uiForm.UIForm);
+        }
+
+        //关闭UI界面
+        public static void CloseUIForm(this UIComponent uiComponent, UIFormBase uiForm)
+        {
+            uiComponent.CloseUIForm(uiForm.RuntimeUIForm.UIForm);
         }
     }
 }

@@ -1,14 +1,10 @@
-using System.Collections.Generic;
+using AppDomain = ILRuntime.Runtime.Enviorment.AppDomain;
+using ILRuntime.Runtime.Intepreter;
 using UnityGameFramework.Runtime;
-using Sirius.Runtime;
-using System.Collections;
-using System.Reflection;
+using ILRuntime.CLR.TypeSystem;
 using UnityEngine;
-using System.Linq;
 using System.IO;
 using System;
-using AppDomain = ILRuntime.Runtime.Enviorment.AppDomain;
-
 
 namespace Sirius.Runtime
 {
@@ -34,10 +30,6 @@ namespace Sirius.Runtime
         //加载热更新脚本，可动态改变热更新模式：ILRuntime热更新/Mono程序集反射热更新(非IOS)。加载脚本数据的操作放入预加载流程中
         public void LoadHotfixAssembly(byte[] dllBytes, byte[] pdbBytes)
 	    {
-	        StaticMethod start = null;    //逻辑入口
-            string hotfixTypeName = "HotfixEntry";
-            string hotfixStartMethodName = "Start";
-
             Log.Debug($"当前使用的是ILRuntime模式");
             ILAppDomain = new AppDomain();
 
@@ -58,9 +50,9 @@ namespace Sirius.Runtime
             //            ILAppDomain.UnityMainThreadID = System.Threading.Thread.CurrentThread.ManagedThreadId;
             //#endif
             //做一些ILRuntime的注册，比如重定向函数、注册委托变量、适配器等
-            ILRuntimeUtility.InitILRuntime(ILAppDomain);
-
-            start = new ILStaticMethod(hotfixTypeName.HotFixTypeFullName(), hotfixStartMethodName, 1);
+            string hotfixTypeName = "HotfixEntry";
+            string hotfixStartMethodName = "Start";
+            StaticMethod start = new ILStaticMethod(hotfixTypeName.HotFixTypeFullName(), hotfixStartMethodName, 1);
             //启动热更新的程序
             start.Run(GameEntry.Instance.gameObject);
             //ILAppDomain.Invoke(hotfixTypeName.HotFixTypeFullName(), hotfixStartMethodName, null, GameEntry.Instance.gameObject);
@@ -72,7 +64,12 @@ namespace Sirius.Runtime
             object type = ILAppDomain.LoadedTypes[typeName];
             return type;
         }
-
+        public object GetHotTypeInstance(string typeName)
+        {
+            ILType type = ILAppDomain.LoadedTypes[typeName] as ILType;
+            object instance = new ILTypeInstance(type);
+            return instance;
+        }
         //创建实例对象
         public object CreateInstance(string typeFullName, params object[] args)
         {

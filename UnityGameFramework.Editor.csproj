@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{30C12C91-C121-E224-A2C6-5C7207AA8D3B}</ProjectGuid>
+    <ProjectGuid>{70A87AE2-BD0F-B5B4-8BA8-1AAE70B60968}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>UnityGameFramework.Editor</AssemblyName>
@@ -772,15 +772,15 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="UnityGameFramework.Runtime.csproj">
-      <Project>{6A8A029E-DBDF-BDEF-94E3-A1AAF2AC07E7}</Project>
+      <Project>{3810B0E1-C8C6-500C-C244-F4ED53CC60A8}</Project>
       <Name>UnityGameFramework.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{E0E668BA-12CD-FA94-B561-DF4394CFD389}</Project>
+      <Project>{A6E2EB8B-7C00-F448-6477-BE1643B4513B}</Project>
       <Name>UnityEditor.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{867D1D42-DB4A-FA16-E7C6-B5B1ADC0BAE9}</Project>
+      <Project>{665DC306-358F-04C7-45FC-524A429D87F1}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
   </ItemGroup>

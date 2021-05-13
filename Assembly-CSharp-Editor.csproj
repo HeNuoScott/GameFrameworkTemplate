@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{707DA441-B876-5DA3-B79E-4F9B5C077C81}</ProjectGuid>
+    <ProjectGuid>{213B6311-B463-C8BE-0C73-D81FE2AB4C3E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -766,27 +766,27 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{EF48B276-34B7-2012-6066-8B54A9AA53D5}</Project>
+      <Project>{0BEB53F3-BF71-B005-6472-F18FD4D59791}</Project>
       <Name>Assembly-CSharp</Name>
     </ProjectReference>
     <ProjectReference Include="UnityGameFramework.Runtime.csproj">
-      <Project>{6A8A029E-DBDF-BDEF-94E3-A1AAF2AC07E7}</Project>
+      <Project>{3810B0E1-C8C6-500C-C244-F4ED53CC60A8}</Project>
       <Name>UnityGameFramework.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="UnityGameFramework.Editor.csproj">
-      <Project>{30C12C91-C121-E224-A2C6-5C7207AA8D3B}</Project>
+      <Project>{70A87AE2-BD0F-B5B4-8BA8-1AAE70B60968}</Project>
       <Name>UnityGameFramework.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="ILRuntime.csproj">
-      <Project>{98A1D600-BDAF-4FA4-3A3A-90C943E0E529}</Project>
+      <Project>{29096ADE-E408-EFF5-F56A-5E382A733088}</Project>
       <Name>ILRuntime</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{E0E668BA-12CD-FA94-B561-DF4394CFD389}</Project>
+      <Project>{A6E2EB8B-7C00-F448-6477-BE1643B4513B}</Project>
       <Name>UnityEditor.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{867D1D42-DB4A-FA16-E7C6-B5B1ADC0BAE9}</Project>
+      <Project>{665DC306-358F-04C7-45FC-524A429D87F1}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
   </ItemGroup>
