@@ -1,6 +1,6 @@
 // -----------------------------------------------
 // Copyright © Sirius. All rights reserved.
-// CreateTime: 2021/5/7   16:35:24
+// CreateTime: 2021/5/14   10:0:13
 // -----------------------------------------------
 using System;
 using System.Collections.Generic;
@@ -29,14 +29,23 @@ namespace ILRuntime.Runtime.Generated
         /// </summary>
         public static void Initialize(ILRuntime.Runtime.Enviorment.AppDomain app)
         {
+            Sirius_Runtime_HotLog_Binding.Register(app);
+            Sirius_Runtime_GameEntry_Binding.Register(app);
+            Sirius_Runtime_HotfixComponent_Binding.Register(app);
             System_Type_Binding.Register(app);
             System_Exception_Binding.Register(app);
             System_String_Binding.Register(app);
             GameFramework_Utility_Binding_Text_Binding.Register(app);
             System_Object_Binding.Register(app);
             UnityEngine_LayerMask_Binding.Register(app);
+            UnityGameFramework_Runtime_EntityComponent_Binding.Register(app);
+            UnityGameFramework_Runtime_Entity_Binding.Register(app);
+            UnityEngine_Object_Binding.Register(app);
+            Sirius_Runtime_HotEntity_Binding.Register(app);
+            UnityGameFramework_Runtime_EntityLogic_Binding.Register(app);
+            System_Reflection_MemberInfo_Binding.Register(app);
+            Sirius_Runtime_EntityExtension_Binding.Register(app);
             System_Collections_Generic_List_1_ILTypeInstance_Binding.Register(app);
-            Sirius_Runtime_GameEntry_Binding.Register(app);
             UnityGameFramework_Runtime_DataTableComponent_Binding.Register(app);
             GameFramework_DataTable_IDataTable_1_DRAircraft_Binding.Register(app);
             Sirius_Runtime_DRAircraft_Binding.Register(app);
@@ -44,33 +53,24 @@ namespace ILRuntime.Runtime.Generated
             Sirius_Runtime_DRArmor_Binding.Register(app);
             GameFramework_DataTable_IDataTable_1_DRAsteroid_Binding.Register(app);
             Sirius_Runtime_DRAsteroid_Binding.Register(app);
-            UnityEngine_Vector3_Binding.Register(app);
-            UnityEngine_Quaternion_Binding.Register(app);
             GameFramework_DataTable_IDataTable_1_DRThruster_Binding.Register(app);
             Sirius_Runtime_DRThruster_Binding.Register(app);
             GameFramework_DataTable_IDataTable_1_DRWeapon_Binding.Register(app);
             Sirius_Runtime_DRWeapon_Binding.Register(app);
-            Sirius_Runtime_HotLog_Binding.Register(app);
+            UnityEngine_Vector3_Binding.Register(app);
+            UnityEngine_Quaternion_Binding.Register(app);
             Sirius_Runtime_Entity_Binding.Register(app);
             System_Int32_Binding.Register(app);
-            UnityGameFramework_Runtime_EntityLogic_Binding.Register(app);
-            Sirius_Runtime_HotEntity_Binding.Register(app);
             Sirius_Runtime_SoundExtension_Binding.Register(app);
             UnityEngine_Random_Binding.Register(app);
             UnityEngine_Transform_Binding.Register(app);
-            UnityEngine_Component_Binding.Register(app);
-            UnityExtension_Binding.Register(app);
-            UnityGameFramework_Runtime_EntityComponent_Binding.Register(app);
-            UnityEngine_Object_Binding.Register(app);
             UnityEngine_Input_Binding.Register(app);
             UnityEngine_Camera_Binding.Register(app);
             UnityEngine_Rect_Binding.Register(app);
             UnityEngine_Mathf_Binding.Register(app);
             UnityEngine_Time_Binding.Register(app);
-            UnityGameFramework_Runtime_Entity_Binding.Register(app);
-            System_Reflection_MemberInfo_Binding.Register(app);
-            Sirius_Runtime_EntityExtension_Binding.Register(app);
-            Sirius_Runtime_HotfixComponent_Binding.Register(app);
+            UnityEngine_Component_Binding.Register(app);
+            UnityExtension_Binding.Register(app);
             UnityGameFramework_Runtime_LoadSceneSuccessEventArgs_Binding.Register(app);
             UnityGameFramework_Runtime_EventComponent_Binding.Register(app);
             UnityGameFramework_Runtime_LoadSceneFailureEventArgs_Binding.Register(app);
@@ -90,18 +90,18 @@ namespace ILRuntime.Runtime.Generated
             System_Single_Binding.Register(app);
             UnityGameFramework_Runtime_ConfigComponent_Binding.Register(app);
             UnityGameFramework_Runtime_VarInt32_Binding.Register(app);
-            Sirius_Runtime_UserUIData_Binding.Register(app);
             GameFramework_DataTable_IDataTable_1_DRUIForm_Binding.Register(app);
             Sirius_Runtime_DRUIForm_Binding.Register(app);
             GameFramework_UI_IUIGroup_Binding.Register(app);
             UnityGameFramework_Runtime_UIForm_Binding.Register(app);
+            Sirius_Runtime_HotUIForm_Binding.Register(app);
             Sirius_Runtime_UIExtension_Binding.Register(app);
             UnityGameFramework_Runtime_UIFormLogic_Binding.Register(app);
-            Sirius_Runtime_HotUIForm_Binding.Register(app);
             Sirius_Runtime_ReferenceCollector_Binding.Register(app);
             UnityEngine_GameObject_Binding.Register(app);
             UnityEngine_UI_Button_Binding.Register(app);
             UnityEngine_Events_UnityEvent_Binding.Register(app);
+            Sirius_Runtime_UserUIData_Binding.Register(app);
             System_Collections_Generic_Dictionary_2_Int32_Int32_Binding.Register(app);
             System_Collections_Generic_KeyValuePair_2_Byte_Int32_Binding.Register(app);
             System_Collections_Generic_Dictionary_2_KeyValuePair_2_Byte_Int32_Byte_Array_Binding.Register(app);

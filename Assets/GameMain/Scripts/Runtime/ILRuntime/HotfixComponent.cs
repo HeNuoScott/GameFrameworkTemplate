@@ -1,10 +1,15 @@
-using AppDomain = ILRuntime.Runtime.Enviorment.AppDomain;
-using ILRuntime.Runtime.Intepreter;
+using System.Collections.Generic;
 using UnityGameFramework.Runtime;
-using ILRuntime.CLR.TypeSystem;
+using Sirius.Runtime;
+using System.Collections;
+using System.Reflection;
 using UnityEngine;
+using System.Linq;
 using System.IO;
 using System;
+using AppDomain = ILRuntime.Runtime.Enviorment.AppDomain;
+using ILRuntime.CLR.TypeSystem;
+using ILRuntime.Runtime.Intepreter;
 
 namespace Sirius.Runtime
 {
@@ -50,6 +55,7 @@ namespace Sirius.Runtime
             //            ILAppDomain.UnityMainThreadID = System.Threading.Thread.CurrentThread.ManagedThreadId;
             //#endif
             //做一些ILRuntime的注册，比如重定向函数、注册委托变量、适配器等
+            ILRuntimeUtility.InitILRuntime(ILAppDomain);
             string hotfixTypeName = "HotfixEntry";
             string hotfixStartMethodName = "Start";
             StaticMethod start = new ILStaticMethod(hotfixTypeName.HotFixTypeFullName(), hotfixStartMethodName, 1);
@@ -64,12 +70,14 @@ namespace Sirius.Runtime
             object type = ILAppDomain.LoadedTypes[typeName];
             return type;
         }
+
         public object GetHotTypeInstance(string typeName)
         {
             ILType type = ILAppDomain.LoadedTypes[typeName] as ILType;
             object instance = new ILTypeInstance(type);
             return instance;
         }
+
         //创建实例对象
         public object CreateInstance(string typeFullName, params object[] args)
         {
