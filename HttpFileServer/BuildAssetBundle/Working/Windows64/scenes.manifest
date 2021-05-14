@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 1827947866
+CRC: 1075644540
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: e69830ef9d7594333c4aeff45590cef7
+    Hash: 678dad2d8693f9622c70ff61fa836a2a
   TypeTreeHash:
     serializedVersion: 2
-    Hash: ad648fcf2fa409c0e83b99ce9a113954
+    Hash: bbdc3aa2870d683062de20adaa280fd2
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -33,6 +33,16 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 108
   Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 128
+  Script: {instanceID: 0}
 - Class: 157
   Script: {instanceID: 0}
 - Class: 196
@@ -41,11 +51,18 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 199
   Script: {instanceID: 0}
+- Class: 222
+  Script: {instanceID: 0}
+- Class: 223
+  Script: {instanceID: 0}
+- Class: 224
+  Script: {instanceID: 0}
 - Class: 850595691
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
-- Assets/GameMain/Scenes/Menu.unity
-- Assets/GameMain/Scenes/Main.unity
+- Assets/GameMain/Scenes/Lobby.unity
+- Assets/GameMain/Scenes/TrainingB.unity
+- Assets/GameMain/Scenes/TrainingA.unity
 Dependencies:
-- E:/WorkSpace/sirius-vr/HttpFileServer/BuildAssetBundle/Working/Windows64/materials
+- E:/WorkSpace/GameFramework/GF_ILRuntime/HttpFileServer/BuildAssetBundle/Working/Windows64/materials

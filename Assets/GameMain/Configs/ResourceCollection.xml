@@ -20,11 +20,13 @@
       <Resource Name="Sounds" FileSystem="Resources" LoadType="0" Packed="True" />
       <Resource Name="Textures" FileSystem="Resources" LoadType="0" Packed="True" />
       <Resource Name="UI/UIForms" FileSystem="UI" LoadType="0" Packed="True" />
+      <Resource Name="UI/UIItems" FileSystem="UI" LoadType="0" Packed="True" />
       <Resource Name="UI/UISounds" FileSystem="UI" LoadType="0" Packed="True" />
       <Resource Name="UI/UISprites/Common" FileSystem="UI" LoadType="0" Packed="True" />
     </Resources>
     <Assets>
       <Asset Guid="0179316b5fc7c2946a67c5877c02fc30" ResourceName="UI/UISprites/Common" />
+      <Asset Guid="032a4825a1d94e04ebf88b8015febbfe" ResourceName="Scenes" />
       <Asset Guid="093f8873cfe371d41b854ed9fb6bff69" ResourceName="Music/About" />
       <Asset Guid="09966b19e546cc94aa84d0743cb2a83d" ResourceName="UI/UIForms" />
       <Asset Guid="0a65a68c01a76ea4b8b574827a6467aa" ResourceName="UI/UISprites/Common" />
@@ -68,6 +70,7 @@
       <Asset Guid="8b1acacd22538f34cb85287a0781ea5e" ResourceName="DataTables" />
       <Asset Guid="8e114ded6a865324588170636872943c" ResourceName="DataTables" />
       <Asset Guid="955000b4d1441470e8cbf94f483228b5" ResourceName="Materials" />
+      <Asset Guid="96d2e77dd9853514da336717bd5627c0" ResourceName="UI/UIItems" />
       <Asset Guid="97d117308cf86924289e81e7e71dd5dd" ResourceName="DataTables" />
       <Asset Guid="9b433f0bb7fef6f4085c316a0d88c307" ResourceName="DataTables" />
       <Asset Guid="9be2e1e45f4edd74c8764538ad306b78" ResourceName="Localization/Dictionaries" ResourceVariant="zh-cn" />

@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 1471166649
+CRC: 1156210785
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
@@ -62,8 +62,12 @@ AssetBundleManifest:
       Dependencies:
         Dependency_0: ui/uisprites/common
     Info_18:
+      Name: ui/uiitems
+      Dependencies:
+        Dependency_0: ui/uisprites/common
+    Info_19:
       Name: ui/uisounds
       Dependencies: {}
-    Info_19:
+    Info_20:
       Name: ui/uisprites/common
       Dependencies: {}

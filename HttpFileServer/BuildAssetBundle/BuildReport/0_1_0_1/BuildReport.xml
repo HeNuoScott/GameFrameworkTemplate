@@ -2,9 +2,9 @@
 <UnityGameFramework>
   <BuildReport>
     <Summary>
-      <ProductName>Star Force</ProductName>
-      <CompanyName>Game Framework</CompanyName>
-      <GameIdentifier>unity.Game Framework.Star Force</GameIdentifier>
+      <ProductName>Sirius-VR</ProductName>
+      <CompanyName>Sirius</CompanyName>
+      <GameIdentifier>com.Sirius.Sirius-VR</GameIdentifier>
       <GameFrameworkVersion>2020.12.31</GameFrameworkVersion>
       <UnityVersion>2021.1.1f1c1</UnityVersion>
       <ApplicableGameVersion>0.1.0</ApplicableGameVersion>
@@ -13,19 +13,19 @@
       <AssetBundleCompression>LZ4</AssetBundleCompression>
       <CompressionHelperTypeName>UnityGameFramework.Runtime.DefaultCompressionHelper</CompressionHelperTypeName>
       <AdditionalCompressionSelected>True</AdditionalCompressionSelected>
-      <ForceRebuildAssetBundleSelected>False</ForceRebuildAssetBundleSelected>
+      <ForceRebuildAssetBundleSelected>True</ForceRebuildAssetBundleSelected>
       <BuildEventHandlerTypeName>Sirius.Editor.SiriusBuildEventHandler</BuildEventHandlerTypeName>
-      <OutputDirectory>E:/WorkSpace/sirius-vr/AssetBundle</OutputDirectory>
-      <BuildAssetBundleOptions>DeterministicAssetBundle, ChunkBasedCompression</BuildAssetBundleOptions>
+      <OutputDirectory>E:/WorkSpace/GameFramework/GF_ILRuntime/HttpFileServer/BuildAssetBundle</OutputDirectory>
+      <BuildAssetBundleOptions>DeterministicAssetBundle, ForceRebuildAssetBundle, ChunkBasedCompression</BuildAssetBundleOptions>
     </Summary>
-    <Resources Count="20">
+    <Resources Count="21">
       <Resource Name="Configs" Extension="dat" FileSystem="GameData" LoadType="0" Packed="True" ResourceGroups="Base">
         <Assets Count="2">
-          <Asset Guid="44c8db52241385c45bbb14a1718f17bf" Name="Assets/GameMain/Configs/DefaultConfig.txt" Length="154" HashCode="1335818174" />
-          <Asset Guid="7fd11dc5d29076d469d414dec2818f11" Name="Assets/GameMain/Configs/DefaultConfig.bytes" Length="45" HashCode="698598607" />
+          <Asset Guid="44c8db52241385c45bbb14a1718f17bf" Name="Assets/GameMain/Configs/DefaultConfig.txt" Length="220" HashCode="-218973065" />
+          <Asset Guid="7fd11dc5d29076d469d414dec2818f11" Name="Assets/GameMain/Configs/DefaultConfig.bytes" Length="67" HashCode="190795299" />
         </Assets>
         <Codes>
-          <Windows64 Length="1381" HashCode="509329576" CompressedLength="1146" CompressedHashCode="642900267" />
+          <Windows64 Length="1431" HashCode="-263353773" CompressedLength="1190" CompressedHashCode="-1781025140" />
         </Codes>
       </Resource>
       <Resource Name="DataTables" Extension="dat" FileSystem="GameData" LoadType="0" Packed="True" ResourceGroups="Base">
@@ -44,7 +44,7 @@
           <Asset Guid="9c3961f379234354e813d7b38146424d" Name="Assets/GameMain/DataTables/Thruster.txt" Length="144" HashCode="891006938" />
           <Asset Guid="9c3faac13c8ced84a9f3018303b7bb98" Name="Assets/GameMain/DataTables/Sound.bytes" Length="167" HashCode="-1089466089" />
           <Asset Guid="a33e23ae848110243820cda82120b105" Name="Assets/GameMain/DataTables/UIForm.bytes" Length="90" HashCode="-1923546927" />
-          <Asset Guid="a71f8bb1b1b2c51438e2bafc884cb02c" Name="Assets/GameMain/DataTables/Scene.txt" Length="240" HashCode="-1388433476" />
+          <Asset Guid="a71f8bb1b1b2c51438e2bafc884cb02c" Name="Assets/GameMain/DataTables/Scene.txt" Length="298" HashCode="-2023933319" />
           <Asset Guid="ab4774faf71b57a40a29a9e902403fe3" Name="Assets/GameMain/DataTables/Weapon.txt" Length="370" HashCode="1232484129" />
           <Asset Guid="ad56aae2bb0f2ce4a86711287e14e223" Name="Assets/GameMain/DataTables/Asteroid.txt" Length="548" HashCode="2096169771" />
           <Asset Guid="b2cebe04343227945bab3729ca9a3493" Name="Assets/GameMain/DataTables/Armor.txt" Length="184" HashCode="-819325575" />
@@ -54,7 +54,7 @@
           <Asset Guid="fdb5edd099d06b045af609ba3172400a" Name="Assets/GameMain/DataTables/Scene.bytes" Length="16" HashCode="-1984402515" />
         </Assets>
         <Codes>
-          <Windows64 Length="4354" HashCode="-1219374337" CompressedLength="3686" CompressedHashCode="1817445052" />
+          <Windows64 Length="4395" HashCode="-360182177" CompressedLength="3713" CompressedHashCode="-490739956" />
         </Codes>
       </Resource>
       <Resource Name="Entities" Extension="dat" FileSystem="Resources" LoadType="0" Packed="True">
@@ -82,11 +82,11 @@
       </Resource>
       <Resource Name="HotFixDll" Extension="dat" LoadType="0" Packed="True">
         <Assets Count="2">
-          <Asset Guid="225038e5b0d2c3d4395337756b8f123a" Name="Assets/GameMain/HotfixDll/Project.Hotfix.dll.bytes" Length="40960" HashCode="-291171652" />
-          <Asset Guid="3ef4668fd91cbc441bcb1e984a3157de" Name="Assets/GameMain/HotfixDll/Project.Hotfix.pdb.bytes" Length="198144" HashCode="-151171645" />
+          <Asset Guid="225038e5b0d2c3d4395337756b8f123a" Name="Assets/GameMain/HotfixDll/Project.Hotfix.dll.bytes" Length="80384" HashCode="-1494499577" />
+          <Asset Guid="3ef4668fd91cbc441bcb1e984a3157de" Name="Assets/GameMain/HotfixDll/Project.Hotfix.pdb.bytes" Length="376320" HashCode="683352621" />
         </Assets>
         <Codes>
-          <Windows64 Length="68618" HashCode="-1758918230" CompressedLength="54830" CompressedHashCode="-1586114923" />
+          <Windows64 Length="138472" HashCode="644318749" CompressedLength="104429" CompressedHashCode="1455465000" />
         </Codes>
       </Resource>
       <Resource Name="Localization/Dictionaries" Variant="en-us" Extension="dat" FileSystem="UI" LoadType="0" Packed="True" ResourceGroups="Base">
@@ -129,7 +129,7 @@
               <DependencyAsset Name="Assets/GameMain/Textures/part_star_dff.tif" />
             </DependencyAssets>
           </Asset>
-          <Asset Guid="8940b037a9b441c4cbd3d2b446838424" Name="Assets/GameMain/Materials/vehicle_playerShip_metal_mat.mat" Length="2522" HashCode="1131768770">
+          <Asset Guid="8940b037a9b441c4cbd3d2b446838424" Name="Assets/GameMain/Materials/vehicle_playerShip_metal_mat.mat" Length="2607" HashCode="1445766208">
             <DependencyAssets Count="2">
               <DependencyAsset Name="Assets/GameMain/Textures/vehicle_playerShip_orange_dff.tif" />
               <DependencyAsset Name="Assets/GameMain/Textures/vehicle_playerShip_orange_nrm.tif" />
@@ -140,7 +140,7 @@
               <DependencyAsset Name="Assets/GameMain/Textures/tile_nebula_green_dff.tif" />
             </DependencyAssets>
           </Asset>
-          <Asset Guid="f36c72c738c55f741afcd674a0b1245f" Name="Assets/GameMain/Materials/vehicle_playerShip_glass_mat.mat" Length="2533" HashCode="-1171961815">
+          <Asset Guid="f36c72c738c55f741afcd674a0b1245f" Name="Assets/GameMain/Materials/vehicle_playerShip_glass_mat.mat" Length="2619" HashCode="1980666473">
             <DependencyAssets Count="2">
               <DependencyAsset Name="Assets/GameMain/Textures/vehicle_playerShip_orange_dff.tif" />
               <DependencyAsset Name="Assets/GameMain/Textures/vehicle_playerShip_orange_nrm.tif" />
@@ -148,7 +148,7 @@
           </Asset>
         </Assets>
         <Codes>
-          <Windows64 Length="85073" HashCode="382449539" CompressedLength="68531" CompressedHashCode="2063500323" />
+          <Windows64 Length="68699" HashCode="-1490692037" CompressedLength="54124" CompressedHashCode="-135375672" />
         </Codes>
       </Resource>
       <Resource Name="Meshes" Extension="dat" FileSystem="Resources" LoadType="0" Packed="True">
@@ -157,7 +157,7 @@
           <Asset Guid="d9808401c68af274a8edfbed3d1b53c7" Name="Assets/GameMain/Meshes/vehicle_playerShip.FBX" Length="104528" HashCode="-999938615" />
         </Assets>
         <Codes>
-          <Windows64 Length="140513" HashCode="-634340728" CompressedLength="117873" CompressedHashCode="80452491" />
+          <Windows64 Length="130479" HashCode="-1815867557" CompressedLength="109431" CompressedHashCode="527867596" />
         </Codes>
       </Resource>
       <Resource Name="Music/About" Extension="dat" FileSystem="Resources" LoadType="0" Packed="True" ResourceGroups="Music">
@@ -185,14 +185,20 @@
         </Codes>
       </Resource>
       <Resource Name="Scenes" Extension="dat" FileSystem="Resources" LoadType="0" Packed="True">
-        <Assets Count="2">
-          <Asset Guid="4473d81b14ddb0143addf0e6050d8491" Name="Assets/GameMain/Scenes/Main.unity" Length="272773" HashCode="-1708409644">
+        <Assets Count="3">
+          <Asset Guid="032a4825a1d94e04ebf88b8015febbfe" Name="Assets/GameMain/Scenes/TrainingB.unity" Length="292531" HashCode="-757718044">
             <DependencyAssets Count="2">
               <DependencyAsset Name="Assets/GameMain/Materials/done_tile_nebula_green_dff.mat" />
               <DependencyAsset Name="Assets/GameMain/Materials/part_star_mat.mat" />
             </DependencyAssets>
           </Asset>
-          <Asset Guid="b031b4f2980561542a7f7ba41391edc3" Name="Assets/GameMain/Scenes/Menu.unity" Length="271749" HashCode="791973063">
+          <Asset Guid="4473d81b14ddb0143addf0e6050d8491" Name="Assets/GameMain/Scenes/TrainingA.unity" Length="292581" HashCode="1859688033">
+            <DependencyAssets Count="2">
+              <DependencyAsset Name="Assets/GameMain/Materials/done_tile_nebula_green_dff.mat" />
+              <DependencyAsset Name="Assets/GameMain/Materials/part_star_mat.mat" />
+            </DependencyAssets>
+          </Asset>
+          <Asset Guid="b031b4f2980561542a7f7ba41391edc3" Name="Assets/GameMain/Scenes/Lobby.unity" Length="287984" HashCode="-2083284697">
             <DependencyAssets Count="2">
               <DependencyAsset Name="Assets/GameMain/Materials/done_tile_nebula_green_dff.mat" />
               <DependencyAsset Name="Assets/GameMain/Materials/part_star_mat.mat" />
@@ -200,7 +206,7 @@
           </Asset>
         </Assets>
         <Codes>
-          <Windows64 Length="69858" HashCode="1103693100" CompressedLength="37294" CompressedHashCode="-1534287851" />
+          <Windows64 Length="112288" HashCode="920781089" CompressedLength="61658" CompressedHashCode="-1124875838" />
         </Codes>
       </Resource>
       <Resource Name="Sounds" Extension="dat" FileSystem="Resources" LoadType="0" Packed="True">
@@ -228,7 +234,7 @@
       </Resource>
       <Resource Name="UI/UIForms" Extension="dat" FileSystem="UI" LoadType="0" Packed="True">
         <Assets Count="1">
-          <Asset Guid="09966b19e546cc94aa84d0743cb2a83d" Name="Assets/GameMain/UI/UIForms/MenuForm.prefab" Length="23919" HashCode="-1608087875">
+          <Asset Guid="09966b19e546cc94aa84d0743cb2a83d" Name="Assets/GameMain/UI/UIForms/MenuForm.prefab" Length="24771" HashCode="-1895322877">
             <DependencyAssets Count="1">
               <DependencyAsset Name="Assets/GameMain/UI/UISprites/Common/button-outline.png" />
             </DependencyAssets>
@@ -236,6 +242,19 @@
         </Assets>
         <Codes>
           <Windows64 Length="7403" HashCode="9197694" CompressedLength="6100" CompressedHashCode="1099882844" />
+        </Codes>
+      </Resource>
+      <Resource Name="UI/UIItems" Extension="dat" FileSystem="UI" LoadType="0" Packed="True">
+        <Assets Count="1">
+          <Asset Guid="96d2e77dd9853514da336717bd5627c0" Name="Assets/GameMain/UI/UIItems/HPBarItem.prefab" Length="9502" HashCode="972670331">
+            <DependencyAssets Count="2">
+              <DependencyAsset Name="Assets/GameMain/UI/UISprites/Common/progressbar.png" />
+              <DependencyAsset Name="Assets/GameMain/UI/UISprites/Common/progressbar-background.png" />
+            </DependencyAssets>
+          </Asset>
+        </Assets>
+        <Codes>
+          <Windows64 Length="6209" HashCode="1388618324" CompressedLength="5029" CompressedHashCode="215517248" />
         </Codes>
       </Resource>
       <Resource Name="UI/UISounds" Extension="dat" FileSystem="UI" LoadType="0" Packed="True">
@@ -268,7 +287,7 @@
           <Asset Guid="f2f4df0b7211e4c42a5638273525d8ee" Name="Assets/GameMain/UI/UISprites/Common/box.png" Length="1058" HashCode="-2109500730" />
         </Assets>
         <Codes>
-          <Windows64 Length="140404" HashCode="1109769804" CompressedLength="86630" CompressedHashCode="-1594346133" />
+          <Windows64 Length="140924" HashCode="2078711145" CompressedLength="87074" CompressedHashCode="427440779" />
         </Codes>
       </Resource>
     </Resources>

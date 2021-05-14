@@ -1351,7 +1351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7eff66e40586ec14d8a301d416f17f1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ResourceMode: 2
+  m_ResourceMode: 1
   m_ReadWritePathType: 0
   m_MinUnloadUnusedAssetsInterval: 60
   m_MaxUnloadUnusedAssetsInterval: 300
@@ -1384,7 +1384,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f98acd7d3bd2bf54dadf9644f60e5cb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EditorResourceMode: 1
+  m_EditorResourceMode: 0
   m_EditorLanguage: 0
   m_VersionHelperTypeName: UnityGameFramework.Runtime.DefaultVersionHelper
   m_LogHelperTypeName: UnityGameFramework.Runtime.DefaultLogHelper

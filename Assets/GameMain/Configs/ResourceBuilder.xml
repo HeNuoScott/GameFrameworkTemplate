@@ -2,14 +2,14 @@
 <UnityGameFramework>
   <ResourceBuilder>
     <Settings>
-      <InternalResourceVersion>3</InternalResourceVersion>
+      <InternalResourceVersion>1</InternalResourceVersion>
       <Platforms>2</Platforms>
       <AssetBundleCompression>1</AssetBundleCompression>
       <CompressionHelperTypeName>UnityGameFramework.Runtime.DefaultCompressionHelper</CompressionHelperTypeName>
       <AdditionalCompressionSelected>True</AdditionalCompressionSelected>
       <ForceRebuildAssetBundleSelected>True</ForceRebuildAssetBundleSelected>
       <BuildEventHandlerTypeName>Sirius.Editor.SiriusBuildEventHandler</BuildEventHandlerTypeName>
-      <OutputDirectory>E:/WorkSpace/sirius-vr/HttpFileServer/BuildAssetBundle</OutputDirectory>
+      <OutputDirectory>E:/WorkSpace/GameFramework/GF_ILRuntime/HttpFileServer/BuildAssetBundle</OutputDirectory>
       <OutputPackageSelected>True</OutputPackageSelected>
       <OutputFullSelected>True</OutputFullSelected>
       <OutputPackedSelected>True</OutputPackedSelected>

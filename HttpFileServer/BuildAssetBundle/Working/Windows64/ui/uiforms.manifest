@@ -3,7 +3,7 @@ CRC: 1535391452
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: fb4360b514cc144d62e489e7765c49a7
+    Hash: c6546efb1531761041fe16340a89e1b5
   TypeTreeHash:
     serializedVersion: 2
     Hash: 841c1ac009367211ec2780863ed8944a
@@ -43,4 +43,4 @@ SerializeReferenceClassIdentifiers: []
 Assets:
 - Assets/GameMain/UI/UIForms/MenuForm.prefab
 Dependencies:
-- E:/WorkSpace/sirius-vr/HttpFileServer/BuildAssetBundle/Working/Windows64/ui/uisprites/common
+- E:/WorkSpace/GameFramework/GF_ILRuntime/HttpFileServer/BuildAssetBundle/Working/Windows64/ui/uisprites/common

@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 739851891
+CRC: 2978112140
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: cd35bbc45c9fb7dfb2bd4ff2a32f9ace
+    Hash: 6f555a7a9efbaf6e953121e294bb83d2
   TypeTreeHash:
     serializedVersion: 2
     Hash: 5ed098661139a8dfcb7d987ca0c8a1ba
@@ -23,4 +23,4 @@ Assets:
 - Assets/GameMain/Materials/done_tile_nebula_green_dff.mat
 - Assets/GameMain/Materials/vehicle_playerShip_glass_mat.mat
 Dependencies:
-- E:/WorkSpace/sirius-vr/HttpFileServer/BuildAssetBundle/Working/Windows64/textures
+- E:/WorkSpace/GameFramework/GF_ILRuntime/HttpFileServer/BuildAssetBundle/Working/Windows64/textures
