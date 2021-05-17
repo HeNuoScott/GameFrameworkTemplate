@@ -75,8 +75,7 @@ namespace Sirius.Runtime
         public Component Get(string key, Type type)
         {
             GameObject obj = GetGO(key);
-            if (obj == null)
-                return null;
+            if (obj == null) return null;
             return obj.GetComponent(type);
         }
 
@@ -86,7 +85,7 @@ namespace Sirius.Runtime
             GameObject dictGo;
             if (!m_Dict.TryGetValue(key, out dictGo))
             {
-                Log.Error(Utility.Text.Format("[HotUIForm.GetGo] HotUIForm中不存在对象名{0}", key));
+                Log.Error(Utility.Text.Format("ReferenceCollector中不存在对象名{0}", key));
                 return null;
             }
             return dictGo;
@@ -98,6 +97,23 @@ namespace Sirius.Runtime
         }
 
         public void OnAfterDeserialize()
+        {
+            m_Dict.Clear();
+            for (int i = 0; i < m_ReferenceObjects.Count; i++)
+            {
+                ReferenceCollectorData data = m_ReferenceObjects[i];
+                if (m_Dict.ContainsKey(data.key))
+                    m_Dict[data.key] = data.obj;    //存在相同的则覆盖
+                else
+                    m_Dict.Add(data.key, data.obj);
+            }
+#if !UNITY_EDITOR
+                        m_ReferenceObjects.Clear();
+                        m_ReferenceObjects = null;
+#endif
+        }
+
+        public void Awake()
         {
             m_Dict.Clear();
             for (int i = 0; i < m_ReferenceObjects.Count; i++)

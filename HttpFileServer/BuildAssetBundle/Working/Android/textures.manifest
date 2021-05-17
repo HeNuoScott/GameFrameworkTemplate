@@ -1,0 +1,20 @@
+ManifestFileVersion: 0
+CRC: 4225739399
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 7cd27493b053c65bcc996d39288c4efb
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: b0363f7088f9761414f730641bf9a24b
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/GameMain/Textures/part_star_dff.tif
+- Assets/GameMain/Textures/tile_nebula_green_dff.tif
+- Assets/GameMain/Textures/vehicle_playerShip_orange_nrm.tif
+- Assets/GameMain/Textures/vehicle_playerShip_orange_dff.tif
+Dependencies: []
