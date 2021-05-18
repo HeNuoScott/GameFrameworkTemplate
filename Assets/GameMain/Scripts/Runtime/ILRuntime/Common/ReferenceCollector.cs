@@ -115,6 +115,8 @@ namespace Sirius.Runtime
 
         public void Awake()
         {
+            if (m_ReferenceObjects == null) return;
+
             m_Dict.Clear();
             for (int i = 0; i < m_ReferenceObjects.Count; i++)
             {
