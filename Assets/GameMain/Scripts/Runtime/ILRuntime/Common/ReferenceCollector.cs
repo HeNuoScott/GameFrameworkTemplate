@@ -12,7 +12,7 @@ namespace Sirius.Runtime
 {
     [AddComponentMenu("Game Main/Reference Collector")]   //组件列表菜单
     [DisallowMultipleComponent]
-    public sealed partial class ReferenceCollector : MonoBehaviour, ISerializationCallbackReceiver
+    public sealed partial class ReferenceCollector : MonoBehaviour
     {
         [SerializeField]
         [HideInInspector]
@@ -91,32 +91,8 @@ namespace Sirius.Runtime
             return dictGo;
         }
 
-        public void OnBeforeSerialize()
-        {
-
-        }
-
-        public void OnAfterDeserialize()
-        {
-            m_Dict.Clear();
-            for (int i = 0; i < m_ReferenceObjects.Count; i++)
-            {
-                ReferenceCollectorData data = m_ReferenceObjects[i];
-                if (m_Dict.ContainsKey(data.key))
-                    m_Dict[data.key] = data.obj;    //存在相同的则覆盖
-                else
-                    m_Dict.Add(data.key, data.obj);
-            }
-#if !UNITY_EDITOR
-                        m_ReferenceObjects.Clear();
-                        m_ReferenceObjects = null;
-#endif
-        }
-
         public void Awake()
         {
-            if (m_ReferenceObjects == null) return;
-
             m_Dict.Clear();
             for (int i = 0; i < m_ReferenceObjects.Count; i++)
             {
