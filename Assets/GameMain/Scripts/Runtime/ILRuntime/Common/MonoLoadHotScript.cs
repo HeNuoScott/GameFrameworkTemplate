@@ -53,12 +53,10 @@ public class MonoLoadHotScript : MonoBehaviour
 
         if (OnInitMethod.IsAvalible) OnInitMethod.Run(this);
     }
-    //释放资源
     private void ReleaseLogicData()
     {
         if (HotLogicInstance != null)
         {
-
             ReferencePool.Release((IReference)OnInitMethod);
             ReferencePool.Release((IReference)OnUpdateMethod);
             ReferencePool.Release((IReference)OnLateUpdateMethod);

@@ -20,7 +20,6 @@ public class HotLoadMonoScript : MonoBehaviour
     public ReferenceCollector ReferenceCollector { get; private set; } //组件对象容器
     public object HotLogicInstance { get; private set; }    //热更的逻辑实例
     public string HotLogicScript;  //保存当前的热更脚本
-
     private InstanceMethod OnInitMethod = null;
     private InstanceMethod OnUpdateMethod = null;
     private InstanceMethod OnLateUpdateMethod = null;
@@ -29,7 +28,6 @@ public class HotLoadMonoScript : MonoBehaviour
     private InstanceMethod OnCollisionEnterMethod = null;
     private InstanceMethod OnCollisionExitMethod = null;
     private InstanceMethod OnOnDestroyMethod = null;
-
     public void InitLogic(string HotLogicTypeName, object HotInstance)
     {
         ReferenceCollector = GetComponent<ReferenceCollector>();
@@ -46,15 +44,15 @@ public class HotLoadMonoScript : MonoBehaviour
         OnCollisionEnterMethod = ReferencePool.Acquire<ILInstanceMethod>().Fill(HotLogicInstance, HotLogicTypeName, "OnCollisionEnter", 1);
         OnCollisionExitMethod = ReferencePool.Acquire<ILInstanceMethod>().Fill(HotLogicInstance, HotLogicTypeName, "OnCollisionExit", 1);
         OnOnDestroyMethod = ReferencePool.Acquire<ILInstanceMethod>().Fill(HotLogicInstance, HotLogicTypeName, "OnDestroy", 0);
-
-        if (OnInitMethod.IsAvalible) OnInitMethod.Run(this);
     }
-    //释放资源
+    private void Start()
+    {
+         if (OnInitMethod.IsAvalible) OnInitMethod.Run(this);
+    }
     private void ReleaseLogicData()
     {
         if (HotLogicInstance != null)
         {
-
             ReferencePool.Release((IReference)OnInitMethod);
             ReferencePool.Release((IReference)OnUpdateMethod);
             ReferencePool.Release((IReference)OnLateUpdateMethod);
@@ -75,7 +73,6 @@ public class HotLoadMonoScript : MonoBehaviour
             OnCollisionExitMethod = null;
             OnOnDestroyMethod = null;
         }
-
     }
     private void Update()
     {
