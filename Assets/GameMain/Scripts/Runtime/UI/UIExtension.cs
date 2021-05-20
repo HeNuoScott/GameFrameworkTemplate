@@ -114,7 +114,14 @@ namespace Sirius.Runtime
         public static void OpenDialog(this UIComponent uiComponent, DialogParams dialogParams)
         {
             if ((GameEntry.Procedure.CurrentProcedure as ProcedureBase).UseNativeDialog) OpenNativeDialog(dialogParams);
-            else uiComponent.OpenHotUIForm(1, "DialogForm", dialogParams);
+            else
+            {
+                ////1	弹出框	DialogForm	Default	TRUE	TRUE
+                //string assetName = AssetUtility.GetUIFormAsset("DialogForm");
+                //uiComponent.OpenUIForm(assetName, "Default", Constant.AssetPriority.UIFormAsset, true, dialogParams);
+                DialogForm dialogForm = Object.Instantiate(GameEntry.BuiltinData.DialogForm);
+                dialogForm.Open(dialogParams);
+            }
         }
 
         private static void OpenNativeDialog(DialogParams dialogParams)

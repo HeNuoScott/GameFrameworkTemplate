@@ -44,6 +44,13 @@ namespace Sirius.Runtime
             set;
         }
 
+        // 程序更新下载地址
+        public string UpdateApplicationUri
+        {
+            get;
+            set;
+        }
+
         // 资源版本列表长度
         public int VersionListLength
         {

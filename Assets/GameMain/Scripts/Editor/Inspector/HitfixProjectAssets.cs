@@ -92,12 +92,7 @@ namespace Sirius.Editor
             {
                 File.Copy(HotfixDll, Path.Combine(AssetUtility.HotfixPath, AssetUtility.HotfixDllName), true);
                 File.Copy(HotfixPdb, Path.Combine(AssetUtility.HotfixPath, AssetUtility.HotfixPdbName), true);
-                UnityEngine.Debug.LogWarning("热更代码 自动导入项目 完成!");
                 AssetDatabase.Refresh();
-            }
-            else
-            {
-                UnityEngine.Debug.LogWarning("热更代码 自动导入项目 失败!");
             }
         }
     }

@@ -1281,6 +1281,7 @@ MonoBehaviour:
   - Sirius.Runtime.ProcedureLaunch
   - Sirius.Runtime.ProcedurePreload
   - Sirius.Runtime.ProcedureSplash
+  - Sirius.Runtime.ProcedureUpdateApplication
   - Sirius.Runtime.ProcedureUpdateResources
   - Sirius.Runtime.ProcedureUpdateVersion
   m_EntranceProcedureTypeName: Sirius.Runtime.ProcedureLaunch
@@ -1351,7 +1352,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7eff66e40586ec14d8a301d416f17f1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ResourceMode: 1
+  m_ResourceMode: 2
   m_ReadWritePathType: 0
   m_MinUnloadUnusedAssetsInterval: 60
   m_MaxUnloadUnusedAssetsInterval: 300
@@ -1533,6 +1534,7 @@ MonoBehaviour:
     type: 3}
   m_UpdateResourceFormTemplate: {fileID: 11487720, guid: a6c731de80e9d824d8f657301a357269,
     type: 3}
+  m_DialogForm: {fileID: 11461274, guid: ecd789bff51490f46938e6ae6716303b, type: 3}
 --- !u!1 &661830385
 GameObject:
   m_ObjectHideFlags: 0

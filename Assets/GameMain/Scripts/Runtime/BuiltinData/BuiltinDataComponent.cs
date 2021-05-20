@@ -22,6 +22,9 @@ namespace Sirius.Runtime
         [SerializeField]
         private UpdateResourceForm m_UpdateResourceFormTemplate = null;
 
+        [SerializeField]
+        private DialogForm m_DialogForm = null;
+
         private BuildInfo m_BuildInfo = null;
 
         public BuildInfo BuildInfo
@@ -29,6 +32,14 @@ namespace Sirius.Runtime
             get
             {
                 return m_BuildInfo;
+            }
+        }
+
+        public DialogForm DialogForm
+        {
+            get
+            {
+                return m_DialogForm;
             }
         }
 

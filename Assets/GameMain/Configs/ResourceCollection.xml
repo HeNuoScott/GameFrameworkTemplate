@@ -96,6 +96,7 @@
       <Asset Guid="e82837c9099f69a48b48fc44eb8d119d" ResourceName="UI/UISprites/Common" />
       <Asset Guid="e830964cdb85ff3429bca484c16bab44" ResourceName="UI/UISounds" />
       <Asset Guid="e85864330b68dde498dcb6e8711815d3" ResourceName="UI/UISprites/Common" />
+      <Asset Guid="ecd789bff51490f46938e6ae6716303b" ResourceName="UI/UIForms" />
       <Asset Guid="f2f4df0b7211e4c42a5638273525d8ee" ResourceName="UI/UISprites/Common" />
       <Asset Guid="f2f97a713beae744181ba934f9c4113a" ResourceName="DataTables" />
       <Asset Guid="f36c72c738c55f741afcd674a0b1245f" ResourceName="Materials" />

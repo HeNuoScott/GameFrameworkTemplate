@@ -18,13 +18,14 @@ namespace Sirius.Runtime
     {
         private bool m_CheckVersionComplete = false;
         private bool m_NeedUpdateVersion = false;
+        private bool m_NeedUpdateApplication = false;
         private VersionInfo m_VersionInfo = null;
 
         public override bool UseNativeDialog
         {
             get
             {
-                return true;
+                return false;
             }
         }
 
@@ -34,6 +35,7 @@ namespace Sirius.Runtime
 
             m_CheckVersionComplete = false;
             m_NeedUpdateVersion = false;
+            m_NeedUpdateApplication = false;
             m_VersionInfo = null;
 
             GameEntry.Event.Subscribe(WebRequestSuccessEventArgs.EventId, OnWebRequestSuccess);
@@ -60,7 +62,12 @@ namespace Sirius.Runtime
                 return;
             }
 
-            if (m_NeedUpdateVersion)
+            if (m_NeedUpdateApplication)
+            {
+                procedureOwner.SetData<VarString>("UpdateApplicationUri", m_VersionInfo.UpdateApplicationUri);
+                ChangeState<ProcedureUpdateApplication>(procedureOwner);
+            }
+            else if (m_NeedUpdateVersion)
             {
                 procedureOwner.SetData<VarInt32>("VersionListLength", m_VersionInfo.VersionListLength);
                 procedureOwner.SetData<VarInt32>("VersionListHashCode", m_VersionInfo.VersionListHashCode);
@@ -77,6 +84,7 @@ namespace Sirius.Runtime
         private void GotoUpdateApp(object userData)
         {
             string url = null;
+            bool isOpenURL = true;
 #if UNITY_EDITOR_WIN || UNITY_STANDALONE_WIN
             url = GameEntry.BuiltinData.BuildInfo.WindowsAppUrl;
 #elif UNITY_EDITOR_OSX || UNITY_STANDALONE_OSX
@@ -85,11 +93,11 @@ namespace Sirius.Runtime
             url = GameEntry.BuiltinData.BuildInfo.IOSAppUrl;
 #elif UNITY_ANDROID
             url = GameEntry.BuiltinData.BuildInfo.AndroidAppUrl;
+            isOpenURL = false;
+            m_NeedUpdateApplication = true;
+            m_CheckVersionComplete = true;
 #endif
-            if (!string.IsNullOrEmpty(url))
-            {
-                Application.OpenURL(url);
-            }
+            if (isOpenURL && !string.IsNullOrEmpty(url)) Application.OpenURL(url);
         }
 
         private void OnWebRequestSuccess(object sender, GameEventArgs e)
@@ -112,8 +120,9 @@ namespace Sirius.Runtime
 
             Log.Info("Latest game version is '{0} ({1})', local game version is '{2} ({3})'.", m_VersionInfo.LatestGameVersion, m_VersionInfo.InternalGameVersion.ToString(), Version.GameVersion, Version.InternalGameVersion.ToString());
 
-            if (m_VersionInfo.ForceUpdateGame)
+            if (m_VersionInfo.ForceUpdateGame && m_VersionInfo.LatestGameVersion != Version.GameVersion)
             {
+                Log.Info("版本需要更新 {0}", m_VersionInfo.UpdateApplicationUri);
                 // 需要强制更新游戏应用
                 GameEntry.UI.OpenDialog(new DialogParams
                 {
@@ -123,7 +132,7 @@ namespace Sirius.Runtime
                     ConfirmText = GameEntry.Localization.GetString("ForceUpdate.UpdateButton"),
                     OnClickConfirm = GotoUpdateApp,
                     CancelText = GameEntry.Localization.GetString("ForceUpdate.QuitButton"),
-                    OnClickCancel = delegate (object userData) { UnityGameFramework.Runtime.GameEntry.Shutdown(ShutdownType.Quit); },
+                    OnClickCancel = delegate (object userData) { GameEntry.ApplicationQuit(); },
                 });
 
                 return;

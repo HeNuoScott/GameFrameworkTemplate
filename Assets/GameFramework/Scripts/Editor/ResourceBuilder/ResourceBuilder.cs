@@ -502,6 +502,7 @@ namespace UnityGameFramework.Editor.ResourceTools
         {
             EditorUtility.ClearProgressBar();
             Debug.Log(Utility.Text.Format("Build resources for '{0}' complete.", platform.ToString()));
+            
         }
 
         private void OnBuildResourceError(string errorMessage)

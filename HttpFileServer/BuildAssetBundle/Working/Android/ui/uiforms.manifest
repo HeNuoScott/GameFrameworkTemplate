@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 1176251090
+CRC: 1192816222
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: ac63e07c642da12a87ddab4db90008e6
+    Hash: efeae6a18776e98766c42ff013a9ee64
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 841c1ac009367211ec2780863ed8944a
+    Hash: 6814c6f48a979166c029362ddb49f8a8
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -24,9 +24,13 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
 - Class: 114
+  Script: {fileID: 11500000, guid: a5079836f95c2a44b96fa331487ebb70, type: 3}
+- Class: 114
   Script: {fileID: 11500000, guid: dca69c3580994a642aa402365440c530, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 438d386ab52ac9f44969fa1be3c72008, type: 3}
 - Class: 115
   Script: {instanceID: 0}
 - Class: 128
@@ -41,6 +45,7 @@ ClassTypes:
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
+- Assets/GameMain/UI/UIForms/DialogForm.prefab
 - Assets/GameMain/UI/UIForms/MenuForm.prefab
 Dependencies:
 - E:/WorkSpace/GameFramework/GF_ILRuntime/HttpFileServer/BuildAssetBundle/Working/Android/ui/uisprites/common
