@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 11681938
+CRC: 232097412
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
@@ -39,35 +39,29 @@ AssetBundleManifest:
       Name: meshes
       Dependencies: {}
     Info_11:
-      Name: music/about
+      Name: music
       Dependencies: {}
     Info_12:
-      Name: music/background
-      Dependencies: {}
-    Info_13:
-      Name: music/menu
-      Dependencies: {}
-    Info_14:
       Name: scenes
       Dependencies:
         Dependency_0: materials
-    Info_15:
+    Info_13:
       Name: sounds
       Dependencies: {}
-    Info_16:
+    Info_14:
       Name: textures
       Dependencies: {}
-    Info_17:
+    Info_15:
       Name: ui/uiforms
       Dependencies:
-        Dependency_0: ui/uisprites/common
-    Info_18:
+        Dependency_0: ui/uisprites
+    Info_16:
       Name: ui/uiitems
       Dependencies:
-        Dependency_0: ui/uisprites/common
-    Info_19:
+        Dependency_0: ui/uisprites
+    Info_17:
       Name: ui/uisounds
       Dependencies: {}
-    Info_20:
-      Name: ui/uisprites/common
+    Info_18:
+      Name: ui/uisprites
       Dependencies: {}

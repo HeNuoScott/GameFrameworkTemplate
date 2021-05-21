@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 162898081
+CRC: 1597459870
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: b595ac2cabe63f1f78425cfd65e141f5
+    Hash: 658e7f752525ed3a8fd4a29399363ae1
   TypeTreeHash:
     serializedVersion: 2
     Hash: c16211402ea7cde03bfc95c1ede8c020
@@ -33,4 +33,4 @@ SerializeReferenceClassIdentifiers: []
 Assets:
 - Assets/GameMain/UI/UIItems/HPBarItem.prefab
 Dependencies:
-- E:/WorkSpace/GameFramework/GF_ILRuntime/HttpFileServer/BuildAssetBundle/Working/Android/ui/uisprites/common
+- E:/WorkSpace/GameFramework/GF_ILRuntime/HttpFileServer/BuildAssetBundle/Working/Android/ui/uisprites
