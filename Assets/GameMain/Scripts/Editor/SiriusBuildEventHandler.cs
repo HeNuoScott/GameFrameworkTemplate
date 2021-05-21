@@ -6,15 +6,12 @@
 //------------------------------------------------------------
 
 using GameFramework;
-using Sirius.Runtime;
 using System.IO;
 using UnityEditor;
 using UnityEngine;
 using UnityGameFramework.Editor.ResourceTools;
-using System.Collections;
 using System.Collections.Generic;
 using System.Text;
-using System;
 
 namespace Sirius.Editor
 {

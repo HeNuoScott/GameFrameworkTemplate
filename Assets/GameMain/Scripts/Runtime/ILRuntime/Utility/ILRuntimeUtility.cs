@@ -14,6 +14,7 @@ namespace Sirius.Runtime
         public static void InitILRuntime(AppDomain appDomain)
         {
             //注册委托参数
+            appDomain.DelegateManager.RegisterMethodDelegate<int>();
             appDomain.DelegateManager.RegisterMethodDelegate<bool>();
             appDomain.DelegateManager.RegisterMethodDelegate<float>();
             appDomain.DelegateManager.RegisterMethodDelegate<string>();
@@ -33,6 +34,10 @@ namespace Sirius.Runtime
             {
                 return new UnityAction(() => ((Action)action).Invoke());
             });
+            appDomain.DelegateManager.RegisterDelegateConvertor<UnityAction<int>>((action) =>
+            {
+                return new UnityAction<int>((a) => ((Action<int>)action).Invoke(a));
+            });
             appDomain.DelegateManager.RegisterDelegateConvertor<UnityAction<bool>>((action) =>
             {
                 return new UnityAction<bool>((a) => ((Action<bool>)action).Invoke(a));
@@ -44,6 +49,10 @@ namespace Sirius.Runtime
             appDomain.DelegateManager.RegisterDelegateConvertor<UnityAction<string>>((action) =>
             {
                 return new UnityAction<string>((a) => ((Action<string>)action).Invoke(a));
+            });
+            appDomain.DelegateManager.RegisterDelegateConvertor<UnityAction<object>>((action) =>
+            {
+                return new UnityAction<object>((a) => ((Action<object>)action).Invoke(a));
             });
             appDomain.DelegateManager.RegisterDelegateConvertor<GameFrameworkAction<object>>((action) =>
             {
