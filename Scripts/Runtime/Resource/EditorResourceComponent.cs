@@ -291,6 +291,17 @@ namespace UnityGameFramework.Runtime
         }
 
         /// <summary>
+        /// 获取使用时下载的等待更新资源数量。
+        /// </summary>
+        public int UpdateWaitingWhilePlayingCount
+        {
+            get
+            {
+                throw new NotSupportedException("UpdateWaitingWhilePlayingCount");
+            }
+        }
+
+        /// <summary>
         /// 获取候选更新资源数量。
         /// </summary>
         public int UpdateCandidateCount
@@ -298,17 +309,6 @@ namespace UnityGameFramework.Runtime
             get
             {
                 throw new NotSupportedException("UpdateCandidateCount");
-            }
-        }
-
-        /// <summary>
-        /// 获取正在更新资源个数。
-        /// </summary>
-        public int UpdatingCount
-        {
-            get
-            {
-                throw new NotSupportedException("UpdatingCount");
             }
         }
 
@@ -519,6 +519,11 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public event EventHandler<GameFramework.Resource.ResourceUpdateFailureEventArgs> ResourceUpdateFailure = null;
 
+        /// <summary>
+        /// 资源更新全部完成事件。
+        /// </summary>
+        public event EventHandler<GameFramework.Resource.ResourceUpdateAllCompleteEventArgs> ResourceUpdateAllComplete = null;
+
 #pragma warning restore 0067, 0414
 
         private void Awake()
@@ -694,7 +699,7 @@ namespace UnityGameFramework.Runtime
         {
             if (string.IsNullOrEmpty(readOnlyPath))
             {
-                Log.Error("Readonly path is invalid.");
+                Log.Error("Read-only path is invalid.");
                 return;
             }
 

@@ -22,6 +22,7 @@ namespace UnityGameFramework.Runtime
             private const int ShowSampleCount = 300;
 
             private readonly List<Sample> m_Samples = new List<Sample>();
+            private readonly Comparison<Sample> m_SampleComparer = SampleComparer;
             private DateTime m_SampleTime = DateTime.MinValue;
             private long m_SampleSize = 0L;
             private long m_DuplicateSampleSize = 0L;
@@ -107,7 +108,7 @@ namespace UnityGameFramework.Runtime
                     m_Samples.Add(new Sample(samples[i].name, samples[i].GetType().Name, sampleSize));
                 }
 
-                m_Samples.Sort(SampleComparer);
+                m_Samples.Sort(m_SampleComparer);
 
                 for (int i = 1; i < m_Samples.Count; i++)
                 {
@@ -120,7 +121,7 @@ namespace UnityGameFramework.Runtime
                 }
             }
 
-            private int SampleComparer(Sample a, Sample b)
+            private static int SampleComparer(Sample a, Sample b)
             {
                 int result = b.Size.CompareTo(a.Size);
                 if (result != 0)
