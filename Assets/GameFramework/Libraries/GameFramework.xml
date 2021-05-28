@@ -174,7 +174,7 @@
             <param name="owner">数据提供者的持有者。</param>
             <param name="resourceManager">资源管理器。</param>
             <param name="dataProviderHelper">数据提供者辅助器。</param>
-            <returns></returns>
+            <returns>创建的数据提供者。</returns>
         </member>
         <member name="T:GameFramework.IDataProvider`1">
             <summary>
@@ -2611,6 +2611,11 @@
             获取任务的优先级。
             </summary>
         </member>
+        <member name="P:GameFramework.TaskBase.UserData">
+            <summary>
+            获取任务的用户自定义数据。
+            </summary>
+        </member>
         <member name="P:GameFramework.TaskBase.Done">
             <summary>
             获取或设置任务是否完成。
@@ -2621,13 +2626,14 @@
             获取任务描述。
             </summary>
         </member>
-        <member name="M:GameFramework.TaskBase.Initialize(System.Int32,System.String,System.Int32)">
+        <member name="M:GameFramework.TaskBase.Initialize(System.Int32,System.String,System.Int32,System.Object)">
             <summary>
             初始化任务基类。
             </summary>
             <param name="serialId">任务的序列编号。</param>
             <param name="tag">任务的标签。</param>
             <param name="priority">任务的优先级。</param>
+            <param name="userData">任务的用户自定义数据。</param>
         </member>
         <member name="M:GameFramework.TaskBase.Clear">
             <summary>
@@ -2639,13 +2645,14 @@
             任务信息。
             </summary>
         </member>
-        <member name="M:GameFramework.TaskInfo.#ctor(System.Int32,System.String,System.Int32,GameFramework.TaskStatus,System.String)">
+        <member name="M:GameFramework.TaskInfo.#ctor(System.Int32,System.String,System.Int32,System.Object,GameFramework.TaskStatus,System.String)">
             <summary>
             初始化任务信息的新实例。
             </summary>
             <param name="serialId">任务的序列编号。</param>
             <param name="tag">任务的标签。</param>
             <param name="priority">任务的优先级。</param>
+            <param name="userData">任务的用户自定义数据。</param>
             <param name="status">任务状态。</param>
             <param name="description">任务描述。</param>
         </member>
@@ -2667,6 +2674,11 @@
         <member name="P:GameFramework.TaskInfo.Priority">
             <summary>
             获取任务的优先级。
+            </summary>
+        </member>
+        <member name="P:GameFramework.TaskInfo.UserData">
+            <summary>
+            获取任务的用户自定义数据。
             </summary>
         </member>
         <member name="P:GameFramework.TaskInfo.Status">
@@ -5609,11 +5621,6 @@
             获取下载超时时长，以秒为单位。
             </summary>
         </member>
-        <member name="P:GameFramework.Download.DownloadManager.DownloadTask.UserData">
-            <summary>
-            获取用户自定义数据。
-            </summary>
-        </member>
         <member name="P:GameFramework.Download.DownloadManager.DownloadTask.Description">
             <summary>
             获取下载任务的描述。
@@ -8173,6 +8180,12 @@
             初始化文件系统管理器的新实例。
             </summary>
         </member>
+        <member name="P:GameFramework.FileSystem.FileSystemManager.Priority">
+            <summary>
+            获取游戏框架模块优先级。
+            </summary>
+            <remarks>优先级较高的模块会优先轮询，并且关闭操作会后进行。</remarks>
+        </member>
         <member name="P:GameFramework.FileSystem.FileSystemManager.Count">
             <summary>
             获取文件系统数量。
@@ -10297,7 +10310,7 @@
         </member>
         <member name="M:GameFramework.Network.INetworkChannelHelper.DeserializePacketHeader(System.IO.Stream,System.Object@)">
             <summary>
-            反序列消息包头。
+            反序列化消息包头。
             </summary>
             <param name="source">要反序列化的来源流。</param>
             <param name="customErrorData">用户自定义错误数据。</param>
@@ -13740,14 +13753,14 @@
             获取等待更新资源数量。
             </summary>
         </member>
+        <member name="P:GameFramework.Resource.IResourceManager.UpdateWaitingWhilePlayingCount">
+            <summary>
+            获取使用时下载的等待更新资源数量。
+            </summary>
+        </member>
         <member name="P:GameFramework.Resource.IResourceManager.UpdateCandidateCount">
             <summary>
             获取候选更新资源数量。
-            </summary>
-        </member>
-        <member name="P:GameFramework.Resource.IResourceManager.UpdatingCount">
-            <summary>
-            获取正在更新资源数量。
             </summary>
         </member>
         <member name="P:GameFramework.Resource.IResourceManager.LoadTotalAgentCount">
@@ -13838,6 +13851,11 @@
         <member name="E:GameFramework.Resource.IResourceManager.ResourceUpdateFailure">
             <summary>
             资源更新失败事件。
+            </summary>
+        </member>
+        <member name="E:GameFramework.Resource.IResourceManager.ResourceUpdateAllComplete">
+            <summary>
+            资源更新全部完成事件。
             </summary>
         </member>
         <member name="M:GameFramework.Resource.IResourceManager.SetReadOnlyPath(System.String)">
@@ -15417,14 +15435,14 @@
             获取等待更新资源数量。
             </summary>
         </member>
+        <member name="P:GameFramework.Resource.ResourceManager.UpdateWaitingWhilePlayingCount">
+            <summary>
+            获取使用时下载的等待更新资源数量。
+            </summary>
+        </member>
         <member name="P:GameFramework.Resource.ResourceManager.UpdateCandidateCount">
             <summary>
             获取候选更新资源数量。
-            </summary>
-        </member>
-        <member name="P:GameFramework.Resource.ResourceManager.UpdatingCount">
-            <summary>
-            获取正在更新资源数量。
             </summary>
         </member>
         <member name="P:GameFramework.Resource.ResourceManager.LoadTotalAgentCount">
@@ -15515,6 +15533,11 @@
         <member name="E:GameFramework.Resource.ResourceManager.ResourceUpdateFailure">
             <summary>
             资源更新失败事件。
+            </summary>
+        </member>
+        <member name="E:GameFramework.Resource.ResourceManager.ResourceUpdateAllComplete">
+            <summary>
+            资源更新全部完成事件。
             </summary>
         </member>
         <member name="M:GameFramework.Resource.ResourceManager.Update(System.Single,System.Single)">
@@ -16203,11 +16226,12 @@
             关闭并清理资源检查器。
             </summary>
         </member>
-        <member name="M:GameFramework.Resource.ResourceManager.ResourceChecker.TryRecoverReadWriteVersionList">
+        <member name="M:GameFramework.Resource.ResourceManager.ResourceChecker.CheckResources(System.String,System.Boolean)">
             <summary>
-            尝试恢复读写区版本资源列表。
+            检查资源。
             </summary>
-            <returns>是否恢复成功。</returns>
+            <param name="currentVariant">当前使用的变体。</param>
+            <param name="ignoreOtherVariant">是否忽略处理其它变体的资源，若不忽略，将会移除其它变体的资源。</param>
         </member>
         <member name="T:GameFramework.Resource.ResourceManager.ResourceGroup">
             <summary>
@@ -16791,12 +16815,12 @@
         </member>
         <member name="T:GameFramework.Resource.ResourceManager.ResourceUpdater.ApplyInfo">
             <summary>
-            应用信息。
+            资源应用信息。
             </summary>
         </member>
         <member name="M:GameFramework.Resource.ResourceManager.ResourceUpdater.ApplyInfo.#ctor(GameFramework.Resource.ResourceManager.ResourceName,System.String,GameFramework.Resource.ResourceManager.LoadType,System.Int64,System.Int32,System.Int32,System.Int32,System.Int32,System.String)">
             <summary>
-            初始化应用信息的新实例。
+            初始化资源应用信息的新实例。
             </summary>
             <param name="resourceName">资源名称。</param>
             <param name="fileSystemName">资源所在的文件系统名称。</param>
@@ -16894,14 +16918,14 @@
             获取等待更新资源数量。
             </summary>
         </member>
+        <member name="P:GameFramework.Resource.ResourceManager.ResourceUpdater.UpdateWaitingWhilePlayingCount">
+            <summary>
+            获取使用时下载的等待更新资源数量。
+            </summary>
+        </member>
         <member name="P:GameFramework.Resource.ResourceManager.ResourceUpdater.UpdateCandidateCount">
             <summary>
             获取候选更新资源数量。
-            </summary>
-        </member>
-        <member name="P:GameFramework.Resource.ResourceManager.ResourceUpdater.UpdatingCount">
-            <summary>
-            获取正在更新资源数量。
             </summary>
         </member>
         <member name="M:GameFramework.Resource.ResourceManager.ResourceUpdater.Update(System.Single,System.Single)">
@@ -16958,14 +16982,20 @@
             停止更新资源。
             </summary>
         </member>
+        <member name="M:GameFramework.Resource.ResourceManager.ResourceUpdater.UpdateResource(GameFramework.Resource.ResourceManager.ResourceName)">
+            <summary>
+            更新指定资源。
+            </summary>
+            <param name="resourceName">要更新的资源名称。</param>
+        </member>
         <member name="T:GameFramework.Resource.ResourceManager.ResourceUpdater.UpdateInfo">
             <summary>
-            更新信息。
+            资源更新信息。
             </summary>
         </member>
         <member name="M:GameFramework.Resource.ResourceManager.ResourceUpdater.UpdateInfo.#ctor(GameFramework.Resource.ResourceManager.ResourceName,System.String,GameFramework.Resource.ResourceManager.LoadType,System.Int32,System.Int32,System.Int32,System.Int32,System.String)">
             <summary>
-            初始化更新信息的新实例。
+            初始化资源更新信息的新实例。
             </summary>
             <param name="resourceName">资源名称。</param>
             <param name="fileSystemName">资源所在的文件系统名称。</param>
@@ -17019,6 +17049,11 @@
         <member name="P:GameFramework.Resource.ResourceManager.ResourceUpdater.UpdateInfo.ResourcePath">
             <summary>
             获取资源路径。
+            </summary>
+        </member>
+        <member name="P:GameFramework.Resource.ResourceManager.ResourceUpdater.UpdateInfo.Downloading">
+            <summary>
+            获取或设置下载状态。
             </summary>
         </member>
         <member name="P:GameFramework.Resource.ResourceManager.ResourceUpdater.UpdateInfo.RetryCount">
@@ -17208,6 +17243,27 @@
             获取资源包版本资源列表头标识。
             </summary>
             <returns>资源包版本资源列表头标识。</returns>
+        </member>
+        <member name="T:GameFramework.Resource.ResourceUpdateAllCompleteEventArgs">
+            <summary>
+            资源更新全部完成事件。
+            </summary>
+        </member>
+        <member name="M:GameFramework.Resource.ResourceUpdateAllCompleteEventArgs.#ctor">
+            <summary>
+            初始化资源更新全部完成事件的新实例。
+            </summary>
+        </member>
+        <member name="M:GameFramework.Resource.ResourceUpdateAllCompleteEventArgs.Create">
+            <summary>
+            创建资源更新全部完成事件。
+            </summary>
+            <returns>创建的资源更新全部完成事件。</returns>
+        </member>
+        <member name="M:GameFramework.Resource.ResourceUpdateAllCompleteEventArgs.Clear">
+            <summary>
+            清理资源更新全部完成事件。
+            </summary>
         </member>
         <member name="T:GameFramework.Resource.ResourceUpdateChangedEventArgs">
             <summary>
@@ -20302,326 +20358,6 @@
             停止所有已加载的声音。
             </summary>
             <param name="fadeOutSeconds">声音淡出时间，以秒为单位。</param>
-        </member>
-        <member name="T:GameFramework.Task.ConditionalTask">
-            <summary>
-            条件任务。
-            </summary>
-        </member>
-        <member name="M:GameFramework.Task.ConditionalTask.#ctor">
-            <summary>
-            初始化条件任务的新实例。
-            </summary>
-        </member>
-        <member name="M:GameFramework.Task.ConditionalTask.SetCondition(System.Predicate{GameFramework.Task.ConditionalTask})">
-            <summary>
-            设置任务完成的条件。
-            </summary>
-            <param name="condition">任务完成的条件。</param>
-        </member>
-        <member name="M:GameFramework.Task.ConditionalTask.SetCompleteAction(GameFramework.GameFrameworkAction{GameFramework.Task.ConditionalTask,System.String})">
-            <summary>
-            设置任务完成时的行为。
-            </summary>
-            <param name="completeAction">任务完成时的行为。</param>
-        </member>
-        <member name="M:GameFramework.Task.ConditionalTask.SetFailureAction(GameFramework.GameFrameworkAction{GameFramework.Task.ConditionalTask,System.String})">
-            <summary>
-            设置任务失败时的行为。
-            </summary>
-            <param name="failureAction">任务失败时的行为。</param>
-        </member>
-        <member name="M:GameFramework.Task.ConditionalTask.SetCancelAction(GameFramework.GameFrameworkAction{GameFramework.Task.ConditionalTask,System.String})">
-            <summary>
-            设置任务取消时的行为。
-            </summary>
-            <param name="cancelAction">任务取消时的行为。</param>
-        </member>
-        <member name="M:GameFramework.Task.ConditionalTask.OnStart">
-            <summary>
-            任务开始时调用。
-            </summary>
-        </member>
-        <member name="M:GameFramework.Task.ConditionalTask.OnUpdate(System.Single,System.Single)">
-            <summary>
-            任务轮询时调用。
-            </summary>
-            <param name="elapseSeconds">逻辑流逝时间，以秒为单位。</param>
-            <param name="realElapseSeconds">真实流逝时间，以秒为单位。</param>
-        </member>
-        <member name="M:GameFramework.Task.ConditionalTask.OnComplete(System.String)">
-            <summary>
-            任务完成时调用。
-            </summary>
-            <param name="reason">任务完成的原因。</param>
-        </member>
-        <member name="M:GameFramework.Task.ConditionalTask.OnFailure(System.String)">
-            <summary>
-            任务失败时调用。
-            </summary>
-            <param name="reason">任务失败的原因。</param>
-        </member>
-        <member name="M:GameFramework.Task.ConditionalTask.OnCancel(System.String)">
-            <summary>
-            任务取消时调用。
-            </summary>
-            <param name="reason">任务取消的原因。</param>
-        </member>
-        <member name="T:GameFramework.Task.ITaskManager">
-            <summary>
-            任务管理器。
-            </summary>
-        </member>
-        <member name="P:GameFramework.Task.ITaskManager.Count">
-            <summary>
-            获取任务数量。
-            </summary>
-        </member>
-        <member name="M:GameFramework.Task.ITaskManager.GenerateTask``1">
-            <summary>
-            生成任务。
-            </summary>
-            <typeparam name="T">任务的类型。</typeparam>
-            <returns>生成的指定类型的任务。</returns>
-        </member>
-        <member name="M:GameFramework.Task.ITaskManager.GenerateTask``1(System.Int32)">
-            <summary>
-            生成任务。
-            </summary>
-            <typeparam name="T">任务的类型。</typeparam>
-            <param name="priority">任务的优先级。</param>
-            <returns>生成的指定类型的任务。</returns>
-        </member>
-        <member name="M:GameFramework.Task.ITaskManager.CancelTask(System.Int32)">
-            <summary>
-            取消任务。
-            </summary>
-            <param name="serialId">要取消的任务的序列编号。</param>
-            <returns>是否取消任务成功。</returns>
-        </member>
-        <member name="M:GameFramework.Task.ITaskManager.CancelTask(System.Int32,System.String)">
-            <summary>
-            取消任务。
-            </summary>
-            <param name="serialId">要取消的任务的序列编号。</param>
-            <param name="reason">任务取消的原因。</param>
-            <returns>是否取消任务成功。</returns>
-        </member>
-        <member name="M:GameFramework.Task.ITaskManager.CancelTask(GameFramework.Task.TaskBase)">
-            <summary>
-            取消任务。
-            </summary>
-            <param name="task">要取消的任务。</param>
-            <returns>是否取消任务成功。</returns>
-        </member>
-        <member name="M:GameFramework.Task.ITaskManager.CancelTask(GameFramework.Task.TaskBase,System.String)">
-            <summary>
-            取消任务。
-            </summary>
-            <param name="task">要取消的任务。</param>
-            <param name="reason">任务取消的原因。</param>
-            <returns>是否取消任务成功。</returns>
-        </member>
-        <member name="M:GameFramework.Task.ITaskManager.CancelAllTasks(System.String)">
-            <summary>
-            取消所有任务。
-            </summary>
-            <param name="reason">任务取消的原因。</param>
-        </member>
-        <member name="T:GameFramework.Task.TaskBase">
-            <summary>
-            任务基类。
-            </summary>
-        </member>
-        <member name="F:GameFramework.Task.TaskBase.DefaultPriority">
-            <summary>
-            任务默认优先级。
-            </summary>
-        </member>
-        <member name="M:GameFramework.Task.TaskBase.#ctor">
-            <summary>
-            初始化任务基类的新实例。
-            </summary>
-        </member>
-        <member name="P:GameFramework.Task.TaskBase.SerialId">
-            <summary>
-            获取任务的序列编号。
-            </summary>
-        </member>
-        <member name="P:GameFramework.Task.TaskBase.Priority">
-            <summary>
-            获取任务的优先级。
-            </summary>
-        </member>
-        <member name="P:GameFramework.Task.TaskBase.Status">
-            <summary>
-            获取任务的状态。
-            </summary>
-        </member>
-        <member name="P:GameFramework.Task.TaskBase.UserData">
-            <summary>
-            获取或设置用户自定义数据。
-            </summary>
-        </member>
-        <member name="M:GameFramework.Task.TaskBase.Initialize(System.Int32,System.Int32)">
-            <summary>
-            初始化任务基类。
-            </summary>
-            <param name="serialId">任务的序列编号。</param>
-            <param name="priority">任务的优先级。</param>
-        </member>
-        <member name="M:GameFramework.Task.TaskBase.Clear">
-            <summary>
-            清理任务基类。
-            </summary>
-        </member>
-        <member name="M:GameFramework.Task.TaskBase.OnGenerate">
-            <summary>
-            任务生成时调用。
-            </summary>
-        </member>
-        <member name="M:GameFramework.Task.TaskBase.OnStart">
-            <summary>
-            任务开始时调用。
-            </summary>
-        </member>
-        <member name="M:GameFramework.Task.TaskBase.OnUpdate(System.Single,System.Single)">
-            <summary>
-            任务轮询时调用。
-            </summary>
-            <param name="elapseSeconds">逻辑流逝时间，以秒为单位。</param>
-            <param name="realElapseSeconds">真实流逝时间，以秒为单位。</param>
-        </member>
-        <member name="M:GameFramework.Task.TaskBase.OnComplete(System.String)">
-            <summary>
-            任务完成时调用。
-            </summary>
-            <param name="reason">任务完成的原因。</param>
-        </member>
-        <member name="M:GameFramework.Task.TaskBase.OnFailure(System.String)">
-            <summary>
-            任务失败时调用。
-            </summary>
-            <param name="reason">任务失败的原因。</param>
-        </member>
-        <member name="M:GameFramework.Task.TaskBase.OnCancel(System.String)">
-            <summary>
-            任务取消时调用。
-            </summary>
-            <param name="reason">任务取消的原因。</param>
-        </member>
-        <member name="T:GameFramework.Task.TaskManager">
-            <summary>
-            任务管理器。
-            </summary>
-        </member>
-        <member name="M:GameFramework.Task.TaskManager.#ctor">
-            <summary>
-            初始化任务管理器的新实例。
-            </summary>
-        </member>
-        <member name="P:GameFramework.Task.TaskManager.Count">
-            <summary>
-            获取任务数量。
-            </summary>
-        </member>
-        <member name="M:GameFramework.Task.TaskManager.Update(System.Single,System.Single)">
-            <summary>
-            任务管理器轮询。
-            </summary>
-            <param name="elapseSeconds">逻辑流逝时间，以秒为单位。</param>
-            <param name="realElapseSeconds">真实流逝时间，以秒为单位。</param>
-        </member>
-        <member name="M:GameFramework.Task.TaskManager.Shutdown">
-            <summary>
-            关闭并清理任务管理器。
-            </summary>
-        </member>
-        <member name="M:GameFramework.Task.TaskManager.GenerateTask``1">
-            <summary>
-            生成任务。
-            </summary>
-            <typeparam name="T">任务的类型。</typeparam>
-            <returns>生成的指定类型的任务。</returns>
-        </member>
-        <member name="M:GameFramework.Task.TaskManager.GenerateTask``1(System.Int32)">
-            <summary>
-            生成任务。
-            </summary>
-            <typeparam name="T">任务的类型。</typeparam>
-            <param name="priority">任务的优先级。</param>
-            <returns>生成的指定类型的任务。</returns>
-        </member>
-        <member name="M:GameFramework.Task.TaskManager.CancelTask(System.Int32)">
-            <summary>
-            取消任务。
-            </summary>
-            <param name="serialId">要取消的任务的序列编号。</param>
-            <returns>是否取消任务成功。</returns>
-        </member>
-        <member name="M:GameFramework.Task.TaskManager.CancelTask(System.Int32,System.String)">
-            <summary>
-            取消任务。
-            </summary>
-            <param name="serialId">要取消的任务的序列编号。</param>
-            <param name="reason">任务取消的原因。</param>
-            <returns>是否取消任务成功。</returns>
-        </member>
-        <member name="M:GameFramework.Task.TaskManager.CancelTask(GameFramework.Task.TaskBase)">
-            <summary>
-            取消任务。
-            </summary>
-            <param name="task">要取消的任务。</param>
-            <returns>是否取消任务成功。</returns>
-        </member>
-        <member name="M:GameFramework.Task.TaskManager.CancelTask(GameFramework.Task.TaskBase,System.String)">
-            <summary>
-            取消任务。
-            </summary>
-            <param name="task">要取消的任务。</param>
-            <param name="reason">任务取消的原因。</param>
-            <returns>是否取消任务成功。</returns>
-        </member>
-        <member name="M:GameFramework.Task.TaskManager.CancelAllTasks(System.String)">
-            <summary>
-            取消所有任务。
-            </summary>
-            <param name="reason">任务取消的原因。</param>
-        </member>
-        <member name="T:GameFramework.Task.TaskStatus">
-            <summary>
-            任务状态。
-            </summary>
-        </member>
-        <member name="F:GameFramework.Task.TaskStatus.Free">
-            <summary>
-            空闲。
-            </summary>
-        </member>
-        <member name="F:GameFramework.Task.TaskStatus.Waiting">
-            <summary>
-            等待中。
-            </summary>
-        </member>
-        <member name="F:GameFramework.Task.TaskStatus.Running">
-            <summary>
-            运行中。
-            </summary>
-        </member>
-        <member name="F:GameFramework.Task.TaskStatus.Completed">
-            <summary>
-            已完成。
-            </summary>
-        </member>
-        <member name="F:GameFramework.Task.TaskStatus.Failed">
-            <summary>
-            已失败。
-            </summary>
-        </member>
-        <member name="F:GameFramework.Task.TaskStatus.Canceled">
-            <summary>
-            已取消。
-            </summary>
         </member>
         <member name="T:GameFramework.UI.CloseUIFormCompleteEventArgs">
             <summary>
@@ -23773,11 +23509,6 @@
         <member name="P:GameFramework.WebRequest.WebRequestManager.WebRequestTask.Timeout">
             <summary>
             获取 Web 请求超时时长，以秒为单位。
-            </summary>
-        </member>
-        <member name="P:GameFramework.WebRequest.WebRequestManager.WebRequestTask.UserData">
-            <summary>
-            获取用户自定义数据。
             </summary>
         </member>
         <member name="P:GameFramework.WebRequest.WebRequestManager.WebRequestTask.Description">

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Dictionaries>
   <Dictionary Language="English">
-    <String Key="Game.Name" Value="Scott" />
+    <String Key="Game.Name" Value="STAR FORCE" />
     <String Key="Game.Description" Value="Game Framework Demo Program" />
     <String Key="Game.Website" Value="https://GameFramework.cn/" />
     <String Key="Game.Summary" Value="This project is a demo game made with Game Framework. It's intended to demonstrate how this game framework should be used for developers' reference." />

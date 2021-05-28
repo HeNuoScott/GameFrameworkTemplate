@@ -225,6 +225,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 513208573}
+  - {fileID: 159694636}
   m_Father: {fileID: 1852670053}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -294,6 +295,135 @@ Transform:
   m_Father: {fileID: 1852670053}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &159694635
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 159694636}
+  - component: {fileID: 159694637}
+  m_Layer: 0
+  m_Name: HP Bar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &159694636
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159694635}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 225739320}
+  m_Father: {fileID: 119167776}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &159694637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159694635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 879e921586721514f9f85de777050af4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HPBarItemTemplate: {fileID: 11414536, guid: 96d2e77dd9853514da336717bd5627c0,
+    type: 3}
+  m_HPBarInstanceRoot: {fileID: 225739320}
+  m_InstancePoolCapacity: 16
+--- !u!1 &225739319
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 225739320}
+  - component: {fileID: 225739322}
+  - component: {fileID: 225739321}
+  m_Layer: 0
+  m_Name: HP Bar Instances
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &225739320
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225739319}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 159694636}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &225739321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225739319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 768, y: 1024}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &225739322
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225739319}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!4 &343542690
 Transform:
   m_ObjectHideFlags: 0
@@ -423,7 +553,6 @@ Transform:
   - {fileID: 343669044}
   - {fileID: 343570492}
   - {fileID: 343542690}
-  - {fileID: 661830386}
   m_Father: {fileID: 1852670053}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1057,7 +1186,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EnableLoadDictionaryUpdateEvent: 0
   m_EnableLoadDictionaryDependencyAssetEvent: 0
-  m_LocalizationHelperTypeName: Sirius.Runtime.XmlLocalizationHelper
+  m_LocalizationHelperTypeName: Sirius.XmlLocalizationHelper
   m_CustomLocalizationHelper: {fileID: 0}
   m_CachedBytesSize: 0
 --- !u!114 &349315700
@@ -1084,7 +1213,7 @@ MonoBehaviour:
   m_InstanceRoot: {fileID: 1576232203}
   m_UIFormHelperTypeName: UnityGameFramework.Runtime.DefaultUIFormHelper
   m_CustomUIFormHelper: {fileID: 0}
-  m_UIGroupHelperTypeName: Sirius.Runtime.UGUIGroupHelper
+  m_UIGroupHelperTypeName: Sirius.UGuiGroupHelper
   m_CustomUIGroupHelper: {fileID: 0}
   m_UIGroups:
   - m_Name: Default
@@ -1270,21 +1399,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AvailableProcedureTypeNames:
-  - Sirius.Runtime.HotProcedureChangeScene
-  - Sirius.Runtime.HotProcedureEntry
-  - Sirius.Runtime.HotProcedureLobby
-  - Sirius.Runtime.HotProcedureTrainingGroundA
-  - Sirius.Runtime.HotProcedureTrainingGroundB
-  - Sirius.Runtime.ProcedureCheckResources
-  - Sirius.Runtime.ProcedureCheckVersion
-  - Sirius.Runtime.ProcedureInitResources
-  - Sirius.Runtime.ProcedureLaunch
-  - Sirius.Runtime.ProcedurePreload
-  - Sirius.Runtime.ProcedureSplash
-  - Sirius.Runtime.ProcedureUpdateApplication
-  - Sirius.Runtime.ProcedureUpdateResources
-  - Sirius.Runtime.ProcedureUpdateVersion
-  m_EntranceProcedureTypeName: Sirius.Runtime.ProcedureLaunch
+  - Sirius.ProcedureChangeScene
+  - Sirius.ProcedureCheckResources
+  - Sirius.ProcedureCheckVersion
+  - Sirius.ProcedureInitResources
+  - Sirius.ProcedureLaunch
+  - Sirius.ProcedureMain
+  - Sirius.ProcedureMenu
+  - Sirius.ProcedurePreload
+  - Sirius.ProcedureSplash
+  - Sirius.ProcedureUpdateResources
+  - Sirius.ProcedureUpdateVersion
+  m_EntranceProcedureTypeName: Sirius.ProcedureLaunch
 --- !u!114 &349408970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1390,7 +1516,7 @@ MonoBehaviour:
   m_VersionHelperTypeName: UnityGameFramework.Runtime.DefaultVersionHelper
   m_LogHelperTypeName: UnityGameFramework.Runtime.DefaultLogHelper
   m_CompressionHelperTypeName: UnityGameFramework.Runtime.DefaultCompressionHelper
-  m_JsonHelperTypeName: Sirius.Runtime.LitJsonHelper
+  m_JsonHelperTypeName: Sirius.LitJsonHelper
   m_FrameRate: 60
   m_GameSpeed: 1
   m_RunInBackground: 1
@@ -1534,50 +1660,8 @@ MonoBehaviour:
     type: 3}
   m_UpdateResourceFormTemplate: {fileID: 11487720, guid: a6c731de80e9d824d8f657301a357269,
     type: 3}
-  m_DialogForm: {fileID: 11461274, guid: ecd789bff51490f46938e6ae6716303b, type: 3}
---- !u!1 &661830385
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 661830386}
-  - component: {fileID: 661830387}
-  m_Layer: 0
-  m_Name: ILRuntime
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &661830386
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 661830385}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 343569412}
-  m_RootOrder: 20
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &661830387
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 661830385}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0a27f0cfe9d5bd47b4014c81478ec1a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_ResetIPForm: {fileID: 1252208250847831300, guid: a1d3a0ba34afed44bb279e9d7070bff3,
+    type: 3}
 --- !u!1 &1576232202
 GameObject:
   m_ObjectHideFlags: 0

@@ -80,7 +80,6 @@ namespace Sirius.Editor
             stringBuilder.Append("  \"InternalGameVersion\": ").Append(InternalResourceVersion).Append(",").Append(WindowsNewline);
             stringBuilder.Append("  \"InternalResourceVersion\": ").Append(InternalResourceVersion).Append(",").Append(WindowsNewline);
             stringBuilder.Append("  \"UpdatePrefixUri\": \"").Append("Http://127.0.0.1:8880/" + WaitForOutputFullPath[platform]).Append("\",").Append(WindowsNewline);
-            stringBuilder.Append("  \"UpdateApplicationUri\": \"").Append("Http://127.0.0.1:8880/" + versionListPath).Append("\",").Append(WindowsNewline);
             stringBuilder.Append("  \"VersionListLength\": ").Append(versionListLength).Append(",").Append(WindowsNewline);
             stringBuilder.Append("  \"VersionListHashCode\": ").Append(versionListHashCode).Append(",").Append(WindowsNewline);
             stringBuilder.Append("  \"VersionListCompressedLength\": ").Append(versionListCompressedLength).Append(",").Append(WindowsNewline);
