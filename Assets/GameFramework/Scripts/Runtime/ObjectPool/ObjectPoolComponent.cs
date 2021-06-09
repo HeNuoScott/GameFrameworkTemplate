@@ -22,8 +22,6 @@ namespace UnityGameFramework.Runtime
     {
         private IObjectPoolManager m_ObjectPoolManager = null;
 
-        public IObjectPoolManager ObjectPoolManager { get { return m_ObjectPoolManager; } }
-
         /// <summary>
         /// 获取对象池数量。
         /// </summary>
