@@ -100,6 +100,7 @@ namespace UnityGameFramework.Runtime
             set
             {
                 m_DebuggerManager.ActiveWindow = value;
+                enabled = value;
             }
         }
 
@@ -177,25 +178,6 @@ namespace UnityGameFramework.Runtime
                 return;
             }
 
-            switch (m_ActiveWindow)
-            {
-                case DebuggerActiveWindowType.AlwaysOpen:
-                    ActiveWindow = true;
-                    break;
-
-                case DebuggerActiveWindowType.OnlyOpenWhenDevelopment:
-                    ActiveWindow = Debug.isDebugBuild;
-                    break;
-
-                case DebuggerActiveWindowType.OnlyOpenInEditor:
-                    ActiveWindow = Application.isEditor;
-                    break;
-
-                default:
-                    ActiveWindow = false;
-                    break;
-            }
-
             m_FpsCounter = new FpsCounter(0.5f);
         }
 
@@ -229,17 +211,30 @@ namespace UnityGameFramework.Runtime
             RegisterDebuggerWindow("Profiler/Memory/Font", m_RuntimeMemoryFontInformationWindow);
             RegisterDebuggerWindow("Profiler/Memory/TextAsset", m_RuntimeMemoryTextAssetInformationWindow);
             RegisterDebuggerWindow("Profiler/Memory/ScriptableObject", m_RuntimeMemoryScriptableObjectInformationWindow);
-            if (GameEntry.GetComponent<ObjectPoolComponent>() != null)
-            {
-                RegisterDebuggerWindow("Profiler/Object Pool", m_ObjectPoolInformationWindow);
-            }
+            RegisterDebuggerWindow("Profiler/Object Pool", m_ObjectPoolInformationWindow);
             RegisterDebuggerWindow("Profiler/Reference Pool", m_ReferencePoolInformationWindow);
-            if (GameEntry.GetComponent<NetworkComponent>() != null)
-            {
-                RegisterDebuggerWindow("Profiler/Network", m_NetworkInformationWindow);
-            }
+            RegisterDebuggerWindow("Profiler/Network", m_NetworkInformationWindow);
             RegisterDebuggerWindow("Other/Settings", m_SettingsWindow);
             RegisterDebuggerWindow("Other/Operations", m_OperationsWindow);
+
+            switch (m_ActiveWindow)
+            {
+                case DebuggerActiveWindowType.AlwaysOpen:
+                    ActiveWindow = true;
+                    break;
+
+                case DebuggerActiveWindowType.OnlyOpenWhenDevelopment:
+                    ActiveWindow = Debug.isDebugBuild;
+                    break;
+
+                case DebuggerActiveWindowType.OnlyOpenInEditor:
+                    ActiveWindow = Application.isEditor;
+                    break;
+
+                default:
+                    ActiveWindow = false;
+                    break;
+            }
         }
 
         private void Update()
