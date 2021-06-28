@@ -1,5 +1,6 @@
 ﻿using UnityGameFramework.Runtime;
 using GameFramework.Fsm;
+using UnityEngine;
 
 namespace Sirius
 {
@@ -14,6 +15,8 @@ namespace Sirius
 
             // 参数传入有限状态机名称、拥有者和所有需要的状态
             m_Fsm = fsmComponent.CreateFsm("ActorFsm", this, new IdleState(), new MoveState());
+
+            m_Fsm.Start<IdleState>();
         }
     }
     /// <summary>
@@ -54,6 +57,10 @@ namespace Sirius
             // 本状态被轮询时调用
             base.OnUpdate(fsm, elapseSeconds, realElapseSeconds);
             Log.Info("轮询站立状态。");
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                ChangeState<MoveState>(fsm);
+            }
         }
     }
     /// <summary>

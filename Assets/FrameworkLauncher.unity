@@ -1400,6 +1400,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_AvailableProcedureTypeNames:
   - Sirius.ProcedureChangeScene
+  - Sirius.ProcedureCheckIP
   - Sirius.ProcedureCheckResources
   - Sirius.ProcedureCheckVersion
   - Sirius.ProcedureInitResources
