@@ -42,6 +42,7 @@ public class EnvironmentController : MonoBehaviour
 
     private void Start()
     {
+        if (!Application.isEditor) return; 
         RenderSettings.haloStrength = haloStrength;
         RenderSettings.defaultReflectionResolution = defaultReflectionResolution;
         RenderSettings.defaultReflectionMode = defaultReflectionMode;
