@@ -41,6 +41,12 @@ PlayerSettings:
     height: 1
   m_SplashScreenLogos: []
   m_VirtualRealitySplashScreen: {fileID: 0}
+  m_ShowUnitySplashAds: 0
+  m_AdsAndroidGameId: 
+  m_AdsIosGameId: 
+  m_ShowSplashAdsSlogan: 0
+  m_SloganImage: {fileID: 0}
+  m_SloganHeight: 150
   m_HolographicTrackingLossScreen: {fileID: 0}
   defaultScreenWidth: 1024
   defaultScreenHeight: 768
@@ -147,7 +153,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
     Android: com.Sirius.SiriusAPK
-    Standalone: com.Sirius.Sirius-VR
+    Standalone: com.Sirius.SiriusAPK
     iPhone: com.gameframework.starforce
     tvOS: com.gameframework.starforce
   buildNumber:
@@ -564,6 +570,8 @@ PlayerSettings:
   switchNetworkInterfaceManagerInitializeEnabled: 1
   switchPlayerConnectionEnabled: 1
   switchUseNewStyleFilepaths: 0
+  switchUseMicroSleepForYield: 1
+  switchMicroSleepForYieldTime: 25
   ps4NPAgeRating: 12
   ps4NPTitleSecret: 
   ps4NPTrophyPackPath: 
@@ -695,11 +703,12 @@ PlayerSettings:
   gcIncremental: 0
   assemblyVersionValidation: 1
   gcWBarrierValidation: 0
-  apiCompatibilityLevelPerPlatform: {}
+  apiCompatibilityLevelPerPlatform:
+    Standalone: 3
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: Star Force
-  metroPackageVersion: 
+  metroPackageName: StarForce
+  metroPackageVersion: 1.0.0.0
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
@@ -707,7 +716,7 @@ PlayerSettings:
   metroCertificateNotAfter: 0000000000000000
   metroApplicationDescription: Star Force
   wsaImages: {}
-  metroTileShortName: 
+  metroTileShortName: SiriusAPK
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0
