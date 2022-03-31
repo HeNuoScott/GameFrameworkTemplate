@@ -1,0 +1,12 @@
+{
+    "name": "Trinity.Hotfix",
+    "references": [
+        "UnityGameFramework.Runtime",
+        "Trinity.GameMain",
+        "Trinity.Libraries"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": []
+}
