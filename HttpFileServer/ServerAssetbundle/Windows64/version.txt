@@ -1,0 +1,21 @@
+{
+           "ForceUpdateGame": false,
+
+           "LatestGameVersion": "0.1.0",
+
+           "InternalGameVersion": 18,
+
+           "InternalResourceVersion": 18,
+
+           "UpdatePrefixUri": "http://192.168.3.24:8880/Windows64/",
+
+           "VersionListLength": 7360,
+
+           "VersionListHashCode": 1193429704,
+
+           "VersionListCompressedLength": 2743,
+
+           "VersionListCompressedHashCode": -926523014,
+
+           "END_OF_JSON": ""
+}

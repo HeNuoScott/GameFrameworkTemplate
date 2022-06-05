@@ -1,7 +1,7 @@
 {
   "GameVersion": "0.1.0",
   "InternalGameVersion": 0,
-  "CheckVersionUrl": "https://Sirius.gameframework.cn/Resources/{0}Version.txt",
+  "CheckVersionUrl": "http://192.168.3.24:8880/Windows64/version.txt",
   "WindowsAppUrl": "https://Sirius.gameframework.cn",
   "MacOSAppUrl": "https://Sirius.gameframework.cn",
   "IOSAppUrl": "https://Sirius.gameframework.cn",
