@@ -4,13 +4,13 @@
 // Homepage: https://gameframework.cn/
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
-
-using GameFramework;
-using System.Collections.Generic;
-using UnityEngine;
+using GameEntry = GameMain.GameEntry;
 using UnityGameFramework.Runtime;
+using System.Collections.Generic;
+using GameFramework;
+using UnityEngine;
 
-namespace Sirius
+namespace GameHotFix
 {
     /// <summary>
     /// 战机类。

@@ -5,13 +5,13 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-using System;
+using GameEntry = GameMain.GameEntry;
 using System.Collections.Generic;
-using System.Runtime.InteropServices;
-using UnityEngine;
 using UnityGameFramework.Runtime;
+using UnityEngine;
+using System;
 
-namespace Sirius
+namespace GameHotFix
 {
     /// <summary>
     /// AI 工具类。

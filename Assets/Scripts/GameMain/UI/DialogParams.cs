@@ -7,7 +7,7 @@
 
 using GameFramework;
 
-namespace Sirius
+namespace GameMain
 {
     /// <summary>
     /// 对话框显示数据。

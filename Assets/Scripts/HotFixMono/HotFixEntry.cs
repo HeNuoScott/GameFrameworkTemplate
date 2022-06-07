@@ -1,12 +1,15 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityGameFramework.Runtime;
 using GameFramework.Resource;
-using System.Collections;
+using GameEntry = GameMain.GameEntry;
+using GameFramework.Procedure;
+using GameFramework.Fsm;
+using GameFramework;
 using UnityEngine;
 
-namespace Sirius
+namespace GameHotFix
 {
-    public class HotFixEntry : MonoBehaviour
+    public class HotFixEntry 
     {
         public const string HPBarName = "HP Bar";
 
@@ -16,26 +19,41 @@ namespace Sirius
             private set;
         }
 
-        public static CustomProcedureComponent Procedure
+        public static void Start()
         {
-            get;
-            private set;
+            // 重置流程组件，初始化热更新流程。
+            GameEntry.Fsm.DestroyFsm<IProcedureManager>();
+            var procedureManager = GameFrameworkEntry.GetModule<IProcedureManager>();
+            ProcedureBase[] procedures =
+            {
+                new ProcedureChangeScene(),
+                new ProcedureMain(),
+                new ProcedureMenu(),
+                new ProcedurePreload(),
+            };
+            procedureManager.Initialize(GameFrameworkEntry.GetModule<IFsmManager>(), procedures);
+            procedureManager.StartProcedure<ProcedurePreload>();
+
+            LoadPreFab(HPBarName);
         }
 
-        public static void LoadPreFabs()
+        public static void LoadPreFab(string perfabName)
         {
-            GameEntry.AddComponent<HotFixEntry>();
-            GameEntry.AddComponent<CustomProcedureComponent>();
-            GameEntry.Huatuo.LoadPreFab(HPBarName);
+            string assetName = AssetUtility.GetPerfabsAsset(perfabName);
+            GameEntry.Resource.LoadAsset(assetName, new LoadAssetCallbacks(OnLoadPerfabAssetSucceed, OnLoadPerfabAssetFailured));
         }
 
-        public static void InitCustomComponents()
+        private static void OnLoadPerfabAssetSucceed(string assetName, object asset, float duration, object userData)
         {
-            HPBar = UnityGameFramework.Runtime.GameEntry.GetComponent<HPBarComponent>();
-            Procedure = UnityGameFramework.Runtime.GameEntry.GetComponent<CustomProcedureComponent>();
-
-            Procedure.Run();
+            GameObject formPrefab = asset as GameObject;
+            GameObject instance = GameObject.Instantiate(formPrefab, GameEntry.Customs);
+            HPBar = instance.GetComponent<HPBarComponent>();
+            formPrefab = null;
         }
 
+        private static void OnLoadPerfabAssetFailured(string assetName, LoadResourceStatus status, string errorMessage, object userData)
+        {
+            Log.Error("Can not load {0} from '{1}' with error message '{2}'.", assetName, "PerfabsAsset", errorMessage);
+        }
     }
 }

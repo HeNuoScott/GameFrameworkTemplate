@@ -4,13 +4,13 @@
 // Homepage: https://gameframework.cn/
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
-
+using GameEntry = GameMain.GameEntry;
 using GameFramework.DataTable;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Sirius
+namespace GameHotFix
 {
     [Serializable]
     public abstract class AircraftData : TargetableObjectData

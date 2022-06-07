@@ -7,7 +7,7 @@
 
 using UnityEngine;
 
-namespace Sirius
+namespace GameHotFix
 {
     public class ScrollableBackground : MonoBehaviour
     {

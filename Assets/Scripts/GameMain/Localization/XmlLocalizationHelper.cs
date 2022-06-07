@@ -6,11 +6,11 @@
 //------------------------------------------------------------
 
 using GameFramework.Localization;
-using System;
-using System.Xml;
 using UnityGameFramework.Runtime;
+using System.Xml;
+using System;
 
-namespace Sirius
+namespace GameMain
 {
     /// <summary>
     /// XML 格式的本地化辅助器。

@@ -8,7 +8,7 @@
 using System;
 using UnityEngine;
 
-namespace Sirius
+namespace GameHotFix
 {
     [Serializable]
     public class MyAircraftData : AircraftData

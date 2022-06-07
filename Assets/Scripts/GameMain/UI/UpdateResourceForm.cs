@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-namespace Sirius
+namespace GameMain
 {
     public class UpdateResourceForm : MonoBehaviour
     {

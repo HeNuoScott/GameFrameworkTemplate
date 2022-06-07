@@ -1,22 +1,22 @@
 // -----------------------------------------------
-// Copyright © Sirius. All rights reserved.
+// Copyright © GameHotFix. All rights reserved.
 // CreateTime: 2021/5/6   15:21:19
 // -----------------------------------------------
-using Sirius.Editor.DataTableTools;
-using Sirius;
+using GameMain.Editor.DataTableTools;
+using GameHotFix;
 using GameFramework;
 using System.Text;
 using UnityEditor;
 using UnityEngine;
 using System.IO;
 
-namespace Sirius.Editor
+namespace GameMain.Editor
 {
     public class DataTableCodeBinary
     {
         public static void GenerateDataTables()
         {
-            foreach (string dataTableName in Constant.DataTableName.DataTableNames)
+            foreach (string dataTableName in GameHotFix.Constant.DataTableName.DataTableNames)
             {
                 DataTableProcessor dataTableProcessor = DataTableGenerator.CreateDataTableProcessor(dataTableName);
                 if (!DataTableGenerator.CheckRawData(dataTableProcessor, dataTableName))

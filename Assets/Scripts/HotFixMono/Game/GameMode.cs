@@ -5,7 +5,7 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-namespace Sirius
+namespace GameHotFix
 {
     /// <summary>
     /// 游戏模式。

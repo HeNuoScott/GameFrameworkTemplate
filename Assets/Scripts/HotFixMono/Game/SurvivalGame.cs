@@ -5,11 +5,12 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-using GameFramework;
+using GameEntry = GameMain.GameEntry;
 using GameFramework.DataTable;
+using GameFramework;
 using UnityEngine;
 
-namespace Sirius
+namespace GameHotFix
 {
     public class SurvivalGame : GameBase
     {

@@ -5,17 +5,19 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-using UnityEngine;
+using GameEntry = GameMain.GameEntry;
 using UnityGameFramework.Runtime;
+using UnityEngine;
+using GameMain;
 
-namespace Sirius
+namespace GameHotFix
 {
-    public class MenuForm : UGuiForm
+    public class MenuForm : UGUIForm
     {
         [SerializeField]
         private GameObject m_QuitButton = null;
 
-        private ProcedureMenuState m_ProcedureMenu = null;
+        private ProcedureMenu m_ProcedureMenu = null;
 
         public void OnStartButtonClick()
         {
@@ -51,7 +53,7 @@ namespace Sirius
         {
             base.OnOpen(userData);
 
-            m_ProcedureMenu = (ProcedureMenuState)userData;
+            m_ProcedureMenu = (ProcedureMenu)userData;
             if (m_ProcedureMenu == null)
             {
                 Log.Warning("ProcedureMenu is invalid when open MenuForm.");

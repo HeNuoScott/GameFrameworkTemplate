@@ -11,7 +11,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityGameFramework.Runtime;
 
-namespace Sirius
+namespace GameMain
 {
     public abstract class UGuiForm : UIFormLogic
     {
@@ -54,11 +54,6 @@ namespace Sirius
             {
                 StartCoroutine(CloseCo(FadeTime));
             }
-        }
-
-        public void PlayUISound(int uiSoundId)
-        {
-            GameEntry.Sound.PlayUISound(uiSoundId);
         }
 
         public static void SetMainFont(Font mainFont)

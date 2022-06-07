@@ -11,7 +11,7 @@ using UnityEngine;
 using UnityGameFramework.Editor;
 using UnityGameFramework.Editor.ResourceTools;
 
-namespace Sirius.Editor
+namespace GameMain.Editor
 {
     public static class GameFrameworkConfigs
     {

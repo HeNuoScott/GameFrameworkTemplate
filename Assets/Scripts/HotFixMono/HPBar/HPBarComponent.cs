@@ -5,12 +5,13 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-using GameFramework.ObjectPool;
-using System.Collections.Generic;
-using UnityEngine;
+using GameEntry = GameMain.GameEntry;
 using UnityGameFramework.Runtime;
+using System.Collections.Generic;
+using GameFramework.ObjectPool;
+using UnityEngine;
 
-namespace Sirius
+namespace GameHotFix
 {
     public class HPBarComponent : GameFrameworkComponent
     {

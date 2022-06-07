@@ -9,7 +9,7 @@ using GameFramework.Resource;
 using UnityGameFramework.Runtime;
 using ProcedureOwner = GameFramework.Fsm.IFsm<GameFramework.Procedure.IProcedureManager>;
 
-namespace Sirius
+namespace GameMain
 {
     public class ProcedureSplash : ProcedureBase
     {
@@ -32,7 +32,7 @@ namespace Sirius
             {
                 // 编辑器模式
                 Log.Info("Editor resource mode detected.");
-                ChangeState<ProcedurePreload>(procedureOwner);
+                ChangeState<ProcedureCodeInit>(procedureOwner);
             }
             else if (GameEntry.Resource.ResourceMode == ResourceMode.Package)
             {

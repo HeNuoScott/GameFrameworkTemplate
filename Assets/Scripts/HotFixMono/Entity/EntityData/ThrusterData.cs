@@ -5,11 +5,12 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
+using GameEntry = GameMain.GameEntry;
 using GameFramework.DataTable;
 using System;
 using UnityEngine;
 
-namespace Sirius
+namespace GameHotFix
 {
     [Serializable]
     public class ThrusterData : AccessoryObjectData

@@ -8,7 +8,7 @@
 using System.IO;
 using UnityEngine;
 
-namespace Sirius.Editor.DataTableTools
+namespace GameMain.Editor.DataTableTools
 {
     public sealed partial class DataTableProcessor
     {

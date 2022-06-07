@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEditor;
 
-namespace Sirius.Editor
+namespace GameMain.Editor
 {
     public class BasePostprocessor : AssetPostprocessor
     {

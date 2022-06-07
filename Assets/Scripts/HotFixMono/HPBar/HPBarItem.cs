@@ -5,12 +5,14 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-using System.Collections;
-using UnityEngine;
-using UnityEngine.UI;
+using GameEntry = GameMain.GameEntry;
 using UnityGameFramework.Runtime;
+using System.Collections;
+using UnityEngine.UI;
+using UnityEngine;
+using GameMain;
 
-namespace Sirius
+namespace GameHotFix
 {
     public class HPBarItem : MonoBehaviour
     {

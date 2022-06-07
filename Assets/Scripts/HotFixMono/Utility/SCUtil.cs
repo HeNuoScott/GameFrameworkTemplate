@@ -1,16 +1,16 @@
 // -----------------------------------------------
-// Copyright © Sirius. All rights reserved.
+// Copyright © GameHotFix. All rights reserved.
 // CreateTime: 2021/5/26   13:57:22
 // -----------------------------------------------
 // -----------------------------------------------
-// Copyright © Sirius. All rights reserved.
+// Copyright © GameHotFix. All rights reserved.
 // CreateTime: 2021/4/26   10:34:16
 // -----------------------------------------------
 
 using System.Collections;
 using System.Reflection;
 using UnityEngine;
-using Sirius;
+using GameEntry = GameMain.GameEntry;
 
 public static class SCUtil
 {

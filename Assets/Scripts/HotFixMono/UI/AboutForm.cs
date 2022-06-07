@@ -5,13 +5,14 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-using UnityEngine;
-using UnityEngine.UI;
+using GameEntry = GameMain.GameEntry;
 using UnityGameFramework.Runtime;
+using UnityEngine.UI;
+using UnityEngine;
 
-namespace Sirius
+namespace GameHotFix
 {
-    public class AboutForm : UGuiForm
+    public class AboutForm : UGUIForm
     {
         [SerializeField]
         private RectTransform m_Transform = null;

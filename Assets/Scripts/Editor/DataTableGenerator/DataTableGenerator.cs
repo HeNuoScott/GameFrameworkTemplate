@@ -13,12 +13,12 @@ using System.Text;
 using System.Text.RegularExpressions;
 using UnityEngine;
 
-namespace Sirius.Editor.DataTableTools
+namespace GameMain.Editor.DataTableTools
 {
     public sealed class DataTableGenerator
     {
         private const string DataTablePath = "Assets/GameMain/DataTables";
-        private const string CSharpCodePath = "Assets/Scripts/GameMain/DataTable";
+        private const string CSharpCodePath = "Assets/Scripts/HotFixMono/DataTable";
         private const string CSharpCodeTemplateFileName = "Assets/GameMain/Configs/DataTableCodeTemplate.txt";
         private static readonly Regex EndWithNumberRegex = new Regex(@"\d+$");
         private static readonly Regex NameRegex = new Regex(@"^[A-Z][A-Za-z0-9_]*$");
@@ -74,7 +74,7 @@ namespace Sirius.Editor.DataTableTools
             string dataTableName = (string)userData;
 
             codeContent.Replace("__DATA_TABLE_CREATE_TIME__", DateTime.UtcNow.ToLocalTime().ToString("yyyy-MM-dd HH:mm:ss.fff"));
-            codeContent.Replace("__DATA_TABLE_NAME_SPACE__", "Sirius");
+            codeContent.Replace("__DATA_TABLE_NAME_SPACE__", "GameHotFix");
             codeContent.Replace("__DATA_TABLE_CLASS_NAME__", "DR" + dataTableName);
             codeContent.Replace("__DATA_TABLE_COMMENT__", dataTableProcessor.GetValue(0, 1) + "。");
             codeContent.Replace("__DATA_TABLE_ID_COMMENT__", "获取" + dataTableProcessor.GetComment(dataTableProcessor.IdColumn) + "。");

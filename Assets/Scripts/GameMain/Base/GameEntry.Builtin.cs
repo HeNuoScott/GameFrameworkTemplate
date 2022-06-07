@@ -8,7 +8,7 @@
 using UnityEngine;
 using UnityGameFramework.Runtime;
 
-namespace Sirius
+namespace GameMain
 {
     /// <summary>
     /// 游戏入口。

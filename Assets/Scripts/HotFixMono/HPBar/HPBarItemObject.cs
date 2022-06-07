@@ -9,7 +9,7 @@ using GameFramework;
 using GameFramework.ObjectPool;
 using UnityEngine;
 
-namespace Sirius
+namespace GameHotFix
 {
     public class HPBarItemObject : ObjectBase
     {

@@ -5,11 +5,12 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
+using GameEntry = GameMain.GameEntry;
+using UnityGameFramework.Runtime;
 using GameFramework.DataTable;
 using System;
-using UnityGameFramework.Runtime;
 
-namespace Sirius
+namespace GameHotFix
 {
     public static class EntityExtension
     {

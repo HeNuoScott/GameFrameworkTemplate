@@ -1,11 +1,11 @@
 ﻿// -----------------------------------------------
-// Copyright © Sirius. All rights reserved.
+// Copyright © GameHotFix. All rights reserved.
 // CreateTime: 2021/4/26   10:44:26
 // -----------------------------------------------
 
 using UnityEditor;
 
-namespace Sirius.Editor
+namespace GameMain.Editor
 {
     public sealed class ToolsMenu
     {

@@ -1,7 +1,7 @@
 ﻿using UnityGameFramework.Runtime;
 using ProcedureOwner = GameFramework.Fsm.IFsm<GameFramework.Procedure.IProcedureManager>;
 
-namespace Sirius
+namespace GameMain
 {
     public class ProcedureCheckResources : ProcedureBase
     {
@@ -47,7 +47,7 @@ namespace Sirius
             }
             else
             {
-                ChangeState<ProcedurePreload>(procedureOwner);
+                ChangeState<ProcedureCodeInit>(procedureOwner);
             }
         }
 

@@ -5,10 +5,11 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-using UnityEngine;
+using GameEntry = GameMain.GameEntry;
 using UnityGameFramework.Runtime;
+using UnityEngine;
 
-namespace Sirius
+namespace GameHotFix
 {
     public class HideByBoundary : MonoBehaviour
     {

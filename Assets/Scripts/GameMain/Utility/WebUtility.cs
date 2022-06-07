@@ -7,7 +7,7 @@
 
 using System;
 
-namespace Sirius
+namespace GameMain
 {
     public static class WebUtility
     {

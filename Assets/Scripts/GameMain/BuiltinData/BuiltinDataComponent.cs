@@ -9,7 +9,7 @@ using GameFramework;
 using UnityEngine;
 using UnityGameFramework.Runtime;
 
-namespace Sirius
+namespace GameMain
 {
     public class BuiltinDataComponent : GameFrameworkComponent
     {

@@ -8,7 +8,7 @@
 using UnityEngine;
 using UnityGameFramework.Runtime;
 
-namespace Sirius
+namespace GameHotFix
 {
     public class MyAircraft : Aircraft
     {

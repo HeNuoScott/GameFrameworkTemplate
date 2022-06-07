@@ -5,14 +5,16 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
+using GameEntry = GameMain.GameEntry;
+using UnityGameFramework.Runtime;
+using UnityEngine.UI;
 using GameFramework;
 using UnityEngine;
-using UnityEngine.UI;
-using UnityGameFramework.Runtime;
+using GameMain;
 
-namespace Sirius
+namespace GameHotFix
 {
-    public class DialogForm : UGuiForm
+    public class DialogForm : UGUIForm
     {
         [SerializeField]
         private Text m_TitleText = null;

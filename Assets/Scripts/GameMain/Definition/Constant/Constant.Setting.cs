@@ -5,7 +5,7 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-namespace Sirius
+namespace GameMain
 {
     public static partial class Constant
     {

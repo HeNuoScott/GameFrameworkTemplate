@@ -7,7 +7,7 @@
 
 using UnityEngine;
 
-namespace Sirius
+namespace GameMain
 {
     /// <summary>
     /// 游戏入口。
@@ -26,17 +26,9 @@ namespace Sirius
             private set;
         }
 
-        public static HuatuoComponent Huatuo
-        {
-            get;
-            private set;
-        }
-
-
         private static void InitCustomComponents()
         {
             BuiltinData = UnityGameFramework.Runtime.GameEntry.GetComponent<BuiltinDataComponent>();
-            Huatuo = UnityGameFramework.Runtime.GameEntry.GetComponent<HuatuoComponent>();
         }
 
         /// <summary>

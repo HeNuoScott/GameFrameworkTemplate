@@ -810,7 +810,7 @@ PlayerSettings:
     WebPlayer: 0
     iPhone: 1
   il2cppCompilerConfiguration:
-    Standalone: 0
+    Standalone: 1
   managedStrippingLevel: {}
   incrementalIl2cppBuild:
     iPhone: 1

@@ -1,4 +1,3 @@
-using Sirius;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -56,8 +55,6 @@ public class RefTypes : MonoBehaviour
         //int, long,float,double, IntEnum,object
         List<object> b = new List<object>()
         {
-            new Dictionary<CampPair, RelationType>(),
-            new Dictionary<KeyValuePair<CampType, RelationType>, CampType[]>(),
             new Dictionary<int, long>(),
             new Dictionary<int, float>(),
             new Dictionary<int, double>(),

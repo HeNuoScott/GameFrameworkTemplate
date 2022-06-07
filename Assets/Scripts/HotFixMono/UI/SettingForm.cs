@@ -5,14 +5,15 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-using GameFramework.Localization;
-using UnityEngine;
-using UnityEngine.UI;
+using GameEntry = GameMain.GameEntry;
 using UnityGameFramework.Runtime;
+using GameFramework.Localization;
+using UnityEngine.UI;
+using UnityEngine;
 
-namespace Sirius
+namespace GameHotFix
 {
-    public class SettingForm : UGuiForm
+    public class SettingForm : UGUIForm
     {
         [SerializeField]
         private Toggle m_MusicMuteToggle = null;
@@ -134,7 +135,7 @@ namespace Sirius
                 return;
             }
 
-            GameEntry.Setting.SetString(Constant.Setting.Language, m_SelectedLanguage.ToString());
+            GameEntry.Setting.SetString(GameMain.Constant.Setting.Language, m_SelectedLanguage.ToString());
             GameEntry.Setting.Save();
 
             GameEntry.Sound.StopMusic();

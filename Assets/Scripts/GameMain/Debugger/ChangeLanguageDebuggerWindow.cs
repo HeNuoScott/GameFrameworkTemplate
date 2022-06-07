@@ -10,7 +10,7 @@ using GameFramework.Localization;
 using UnityEngine;
 using UnityGameFramework.Runtime;
 
-namespace Sirius
+namespace GameMain
 {
     public class ChangeLanguageDebuggerWindow : IDebuggerWindow
     {

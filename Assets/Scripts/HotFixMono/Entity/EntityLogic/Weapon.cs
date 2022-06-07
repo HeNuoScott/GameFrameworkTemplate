@@ -5,11 +5,12 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
+using GameEntry = GameMain.GameEntry;
+using UnityGameFramework.Runtime;
 using GameFramework;
 using UnityEngine;
-using UnityGameFramework.Runtime;
 
-namespace Sirius
+namespace GameHotFix
 {
     /// <summary>
     /// 武器类。
