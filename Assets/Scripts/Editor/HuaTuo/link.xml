@@ -21,6 +21,7 @@
 	</assembly>
 	<assembly fullname="UnityEngine.AnimationModule">
 		<type fullname="UnityEngine.Animator" preserve="all" />
+		<type fullname="UnityEngine.Animation" preserve="all" />
 		<type fullname="UnityEngine.AnimationClip" preserve="all" />
 		<type fullname="UnityEngine.RuntimeAnimatorController" preserve="all" />
 		<type fullname="UnityEngine.AnimationEvent" preserve="all" />

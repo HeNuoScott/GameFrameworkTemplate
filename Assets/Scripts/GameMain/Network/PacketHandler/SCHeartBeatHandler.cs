@@ -8,7 +8,7 @@
 using GameFramework.Network;
 using UnityGameFramework.Runtime;
 
-namespace GameHotFix
+namespace GameMain
 {
     public class SCHeartBeatHandler : PacketHandlerBase
     {

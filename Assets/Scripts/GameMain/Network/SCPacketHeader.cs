@@ -5,9 +5,9 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-namespace GameHotFix
+namespace GameMain
 {
-    public abstract class SCPacketBase : PacketBase
+    public sealed class SCPacketHeader : PacketHeaderBase
     {
         public override PacketType PacketType
         {

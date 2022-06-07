@@ -5,28 +5,16 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-using ProtoBuf;
-using System;
-
-namespace GameHotFix
+namespace GameMain
 {
-    [Serializable, ProtoContract(Name = @"SCHeartBeat")]
-    public class SCHeartBeat : SCPacketBase
+    public abstract class CSPacketBase : PacketBase
     {
-        public SCHeartBeat()
-        {
-        }
-
-        public override int Id
+        public override PacketType PacketType
         {
             get
             {
-                return 2;
+                return PacketType.ClientToServer;
             }
-        }
-
-        public override void Clear()
-        {
         }
     }
 }

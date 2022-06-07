@@ -5,7 +5,7 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-namespace GameHotFix
+namespace GameMain
 {
     public enum PacketType : byte
     {

@@ -5,15 +5,15 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-namespace GameHotFix
+namespace GameMain
 {
-    public sealed class CSPacketHeader : PacketHeaderBase
+    public abstract class SCPacketBase : PacketBase
     {
         public override PacketType PacketType
         {
             get
             {
-                return PacketType.ClientToServer;
+                return PacketType.ServerToClient;
             }
         }
     }

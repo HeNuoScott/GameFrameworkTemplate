@@ -17,7 +17,7 @@ using System.IO;
 using ProtoBuf;
 using System;
 
-namespace GameHotFix
+namespace GameMain
 {
     public class NetworkChannelHelper : INetworkChannelHelper
     {

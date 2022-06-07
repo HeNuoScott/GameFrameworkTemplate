@@ -5,16 +5,28 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-namespace GameHotFix
+using ProtoBuf;
+using System;
+
+namespace GameMain
 {
-    public sealed class SCPacketHeader : PacketHeaderBase
+    [Serializable, ProtoContract(Name = @"CSHeartBeat")]
+    public class CSHeartBeat : CSPacketBase
     {
-        public override PacketType PacketType
+        public CSHeartBeat()
+        {
+        }
+
+        public override int Id
         {
             get
             {
-                return PacketType.ServerToClient;
+                return 1;
             }
+        }
+
+        public override void Clear()
+        {
         }
     }
 }

@@ -7,7 +7,7 @@
 
 using GameFramework.Network;
 
-namespace GameHotFix
+namespace GameMain
 {
     public abstract class PacketHandlerBase : IPacketHandler
     {
