@@ -1,10 +1,12 @@
-using System;
+﻿using System.Runtime.CompilerServices;
+using UnityGameFramework.Runtime;
 using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
-using UnityEngine;
 using UnityEngine.Scripting;
+using GameFramework;
+using System.Linq;
+using UnityEngine;
+using System;
 
 [assembly: Preserve]
 enum IntEnum : int
@@ -12,6 +14,13 @@ enum IntEnum : int
     A,
     B,
 }
+
+enum ByteEnum : byte
+{
+    A,
+    B,
+}
+
 
 public class RefTypes : MonoBehaviour
 {
@@ -32,6 +41,77 @@ public class RefTypes : MonoBehaviour
         Instantiate<GameObject>(null, new Vector3(), new Quaternion());
         Instantiate<GameObject>(null, new Vector3(), new Quaternion(), null);
     }
+
+    // GameFramework中使用的泛型
+    void RefGameFramework()
+    {
+        Utility.Text.Format(null, null);
+        Utility.Text.Format(null, null, null);
+        Utility.Text.Format(null, null, null, null);
+
+        Log.Debug(null);
+        Log.Debug(null, null);
+        Log.Debug(null, null, null);
+        Log.Debug(null, null, null, null);
+
+        Log.Info(null);
+        Log.Info(null, null);
+        Log.Info(null, null, null);
+        Log.Info(null, null, null, null);
+
+        Log.Warning(null);
+        Log.Warning(null, null);
+        Log.Warning(null, null, null);
+        Log.Warning(null, null, null, null);
+
+        Log.Error(null);
+        Log.Error(null, null);
+        Log.Error(null, null, null);
+        Log.Error(null, null, null, null);
+
+        Log.Fatal(null);
+        Log.Fatal(null, null);
+        Log.Fatal(null, null, null);
+        Log.Fatal(null, null, null, null);
+        // GameEntry.Localization.GetString(null);
+        // GameEntry.Localization.GetString<string>(null, null);
+        // GameEntry.Localization.GetString<string, string>(null, null, null);
+        // GameEntry.Localization.GetString<string, string, string>(null, null, null, null);
+        // GameEntry.Localization.GetString<string, string, string, string>(null, null, null, null, null);
+        // GameEntry.Localization.GetString<string, string, string, string, string>(null, null, null, null, null, null);
+        // GameEntry.Localization.GetString<string, string, string, string, string, string>(null, null, null, null, null, null, null);
+        // GameEntry.Localization.GetString<string, string, string, string, string, string, string>(null, null, null, null, null, null, null, null);
+        // GameEntry.Localization.GetString<string, string, string, string, string, string, string, string>(null, null, null, null, null, null, null, null, null);
+        // GameEntry.Localization.GetString<string, string, string, string, string, string, string, string, string>(null, null, null, null, null, null, null, null, null, null);
+        // GameEntry.Localization.GetString<string, string, string, string, string, string, string, string, string, string>(null, null, null, null, null, null, null, null, null, null, null);
+        // GameEntry.Localization.GetString<string, string, string, string, string, string, string, string, string, string, string>(null, null, null, null, null, null, null, null, null, null, null, null);
+        // GameEntry.Localization.GetString<string, string, string, string, string, string, string, string, string, string, string, string>(null, null, null, null, null, null, null, null, null, null, null, null, null);
+        // GameEntry.Localization.GetString<string, string, string, string, string, string, string, string, string, string, string, string, string>(null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+        // GameEntry.Localization.GetString<string, string, string, string, string, string, string, string, string, string, string, string, string, string>(null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+        // GameEntry.Localization.GetString<string, string, string, string, string, string, string, string, string, string, string, string, string, string, string>(null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+        // GameEntry.Localization.GetString<string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string>(null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+    }
+
+    // 游戏中使用的泛型
+    void RefGame()
+    {
+        new Dictionary<string, bool>();
+        new Dictionary<byte, object>();
+        new Dictionary<object, ByteEnum>();
+        new Dictionary<ByteEnum, object>();
+        new KeyValuePair<ByteEnum, ByteEnum>();
+        new Dictionary<KeyValuePair<ByteEnum, ByteEnum>, ByteEnum>();
+        new Dictionary<KeyValuePair<ByteEnum, ByteEnum>, ByteEnum[]>();
+        new Dictionary<object, IntEnum>();
+        new Dictionary<IntEnum, object>();
+        new KeyValuePair<IntEnum, IntEnum>();
+        new Dictionary<KeyValuePair<IntEnum, IntEnum>, IntEnum>();
+        new Dictionary<KeyValuePair<IntEnum, IntEnum>, IntEnum[]>();
+        //new Dictionary<CampPair, ByteEnum>();
+        //new Dictionary<CampPair, ByteEnum>();
+        //new Dictionary<GameMode, GameBase>();
+    }
+
     void RefNullable()
     {
         // nullable

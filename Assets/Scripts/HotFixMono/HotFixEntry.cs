@@ -35,6 +35,8 @@ namespace GameHotFix
             procedureManager.StartProcedure<ProcedurePreload>();
 
             LoadPreFab(HPBarName);
+
+            Debug.Log("HotFixEntry Started !!");
         }
 
         public static void LoadPreFab(string perfabName)

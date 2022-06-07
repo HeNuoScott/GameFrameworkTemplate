@@ -1,6 +1,6 @@
 <linker>
 	<assembly fullname="Unity.GameMain" preserve="all" />
-  <assembly fullname="Unity.GameMain.Editor" preserve="all" />
+	<assembly fullname="Unity.HotFixLogic" preserve="all" />
 	<assembly fullname="Unity.HotFixMono" preserve="all" />
 	<assembly fullname="Unity.ThirdParty" preserve="all" />
 	<assembly fullname="System" preserve="all" />

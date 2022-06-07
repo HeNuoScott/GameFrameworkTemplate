@@ -6,8 +6,8 @@ using UnityGameFramework.Runtime;
 
 namespace GameHotFix
 {
-    [StructLayout(LayoutKind.Auto)]
-    public struct CampPair
+    //[StructLayout(LayoutKind.Auto)]
+    public class CampPair
     {
         private readonly CampType m_First;
         private readonly CampType m_Second;
