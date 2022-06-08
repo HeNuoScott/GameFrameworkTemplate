@@ -6,6 +6,16 @@
 
 ---
 
+## Huatuo API接入完成
+
+请使用 Unity 2020.3.33 版本
+Huatuo 官网 https://focus-creative-games.github.io/huatuo/
+huatuo GitHub https://github.com/focus-creative-games/huatuo
+哔哔哩安装教程 https://www.bilibili.com/video/BV1LZ4y1b7CR?share_source=copy_web
+
+本项目 Star Force 是一个使用 Game Framework 接入Huatuo热更新实现范例，供使用者参考。
+
+---
 ## Star Force 简介
 
 Star Force 是一个使用 Game Framework 游戏框架制作的游戏演示项目，主要目的是对 Game Framework 的使用方法做一些示范，供使用者参考。
