@@ -2,7 +2,7 @@
 <UnityGameFramework>
   <BuildSettings>
     <DefaultScenes>
-      <DefaultScene Name="Assets/Sirius Launcher.unity" />
+      <DefaultScene Name="Assets/GameFramework.unity" />
     </DefaultScenes>
     <SearchScenePaths>
       <SearchScenePath Path="Assets" />

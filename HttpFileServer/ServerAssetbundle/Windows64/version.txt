@@ -1,21 +1,21 @@
 {
            "ForceUpdateGame": false,
 
-           "LatestGameVersion": "0.1.0",
+           "LatestGameVersion": "1.0",
 
-           "InternalGameVersion": 18,
+           "InternalGameVersion": 19,
 
-           "InternalResourceVersion": 18,
+           "InternalResourceVersion": 19,
 
-           "UpdatePrefixUri": "http://192.168.3.24:8880/Windows64/",
+           "UpdatePrefixUri": "Http://127.0.0.1:8880/Windows64/",
 
-           "VersionListLength": 7360,
+           "VersionListLength": 7534,
 
-           "VersionListHashCode": 1193429704,
+           "VersionListHashCode": -1139134065,
 
-           "VersionListCompressedLength": 2743,
+           "VersionListCompressedLength": 2824,
 
-           "VersionListCompressedHashCode": -926523014,
+           "VersionListCompressedHashCode": 1142699682,
 
            "END_OF_JSON": ""
 }

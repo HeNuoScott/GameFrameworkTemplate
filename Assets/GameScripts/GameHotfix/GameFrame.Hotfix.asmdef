@@ -1,0 +1,18 @@
+{
+    "name": "GameFrame.Hotfix",
+    "rootNamespace": "",
+    "references": [
+        "GUID:c7826732afa7c90439f595bfa2e8fea1",
+        "GUID:fbdd91adedafb324aade00d9d08f17b7",
+        "GUID:363c5eb08ff8e6a439b85e37b8c20d96"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

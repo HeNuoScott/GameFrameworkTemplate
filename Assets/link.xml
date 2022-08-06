@@ -1,8 +1,8 @@
 <linker>
-	<assembly fullname="Unity.GameMain" preserve="all" />
-	<assembly fullname="Unity.HotFixLogic" preserve="all" />
-	<assembly fullname="Unity.HotFixMono" preserve="all" />
-	<assembly fullname="Unity.ThirdParty" preserve="all" />
+	<assembly fullname="GameFrame.Main" preserve="all" />
+	<assembly fullname="GameFrame.Hotfix" preserve="all" />
+	<assembly fullname="GameFrame.Editor" preserve="all" />
+	<assembly fullname="GameFrame.ThirdParty" preserve="all" />
 	<assembly fullname="System" preserve="all" />
 	<assembly fullname="UnityEngine" preserve="all" />
 	<assembly fullname="UnityEngine.CoreModule" preserve="all" />
@@ -11,7 +11,7 @@
 	<assembly fullname="mscorlib" preserve="all" />
 	<assembly fullname="BehaviorDesigner.Runtime" preserve="all" />
 	<assembly fullname="DOTween" preserve="all" />
-  <assembly fullname="System.Core" preserve="all" />
+	<assembly fullname="System.Core" preserve="all" />
 	<assembly fullname="UnityEngine.ParticleSystemModule">
 		<type fullname="UnityEngine.ParticleSystem" preserve="all" />
 		<type fullname="UnityEngine.ParticleSystemRenderer" preserve="all" />

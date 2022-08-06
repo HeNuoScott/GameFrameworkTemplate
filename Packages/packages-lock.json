@@ -1,14 +1,7 @@
 {
   "dependencies": {
-    "com.focus-creative-games.huatuo": {
-      "version": "0.1.7",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {},
-      "url": "https://package.openupm.cn"
-    },
     "com.unity.collab-proxy": {
-      "version": "1.15.15",
+      "version": "1.15.17",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -23,8 +16,17 @@
       "dependencies": {},
       "url": "https://packages.unity.cn"
     },
+    "com.unity.ide.rider": {
+      "version": "1.2.1",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.test-framework": "1.1.1"
+      },
+      "url": "https://packages.unity.cn"
+    },
     "com.unity.ide.visualstudio": {
-      "version": "2.0.14",
+      "version": "2.0.15",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -88,6 +90,15 @@
         "com.unity.modules.ui": "1.0.0",
         "com.unity.modules.imgui": "1.0.0"
       }
+    },
+    "me.qiankanglai.loopscrollrect": {
+      "version": "https://github.com/qiankanglai/LoopScrollRect.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.ugui": "1.0.0"
+      },
+      "hash": "e9cb0bda755b5debc74f8794270a91d8a90dbf4e"
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",

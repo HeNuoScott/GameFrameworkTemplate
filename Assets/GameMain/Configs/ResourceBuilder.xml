@@ -2,14 +2,14 @@
 <UnityGameFramework>
   <ResourceBuilder>
     <Settings>
-      <InternalResourceVersion>10</InternalResourceVersion>
+      <InternalResourceVersion>22</InternalResourceVersion>
       <Platforms>2</Platforms>
       <AssetBundleCompression>1</AssetBundleCompression>
       <CompressionHelperTypeName>UnityGameFramework.Runtime.DefaultCompressionHelper</CompressionHelperTypeName>
       <AdditionalCompressionSelected>True</AdditionalCompressionSelected>
-      <ForceRebuildAssetBundleSelected>False</ForceRebuildAssetBundleSelected>
-      <BuildEventHandlerTypeName>GameMain.Editor.GameBuildEventHandler</BuildEventHandlerTypeName>
-      <OutputDirectory>E:/WorkSpace2/HuaTuo/GameFramework_Template/Build/AssetBundle</OutputDirectory>
+      <ForceRebuildAssetBundleSelected>True</ForceRebuildAssetBundleSelected>
+      <BuildEventHandlerTypeName>GameFrame.Editor.GameBuildEventHandler</BuildEventHandlerTypeName>
+      <OutputDirectory>E:/UnityProject/HuaTuo/UnityClient/Build/AssetBundle</OutputDirectory>
       <OutputPackageSelected>True</OutputPackageSelected>
       <OutputFullSelected>True</OutputFullSelected>
       <OutputPackedSelected>True</OutputPackedSelected>

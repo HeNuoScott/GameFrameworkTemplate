@@ -10,6 +10,13 @@
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
 
+# HuatuoData
+/[Hh]ybridCLRData/[Aa]ssembliesPostIl2CppStrip/
+/[Hh]ybridCLRData/[Hh]otFixDlls/
+/[Hh]ybridCLRData/[Hh]ybridclr_repo/
+/[Hh]ybridCLRData/[Ii]l2cpp_plus_repo/
+/[Hh]ybridCLRData/[Ll]ocalIl2CppData/
+
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
 /[Mm]emoryCaptures/
