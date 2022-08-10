@@ -1,11 +1,4 @@
-﻿//------------------------------------------------------------
-// Game Framework
-// Copyright © 2013-2021 Jiang Yin. All rights reserved.
-// Homepage: https://gameframework.cn/
-// Feedback: mailto:ellan@gameframework.cn
-//------------------------------------------------------------
-
-using GameFramework;
+﻿using GameFramework;
 using GameFramework.Event;
 using GameFramework.Network;
 using ProtoBuf;
@@ -15,10 +8,12 @@ using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 using UnityGameFramework.Runtime;
+using GameFrame.Main;
+using GameEntry = GameFrame.Main.GameEntry;
 
-namespace GameFrame.Main
+namespace GameFrame.Hotfix
 {
-    public class NetworkChannelHelper : INetworkChannelHelper
+    public class NetworkTestChannelHelper : INetworkChannelHelper
     {
         private readonly Dictionary<int, Type> m_ServerToClientPacketTypes = new Dictionary<int, Type>();
         private readonly MemoryStream m_CachedStream = new MemoryStream(1024 * 8);
@@ -44,8 +39,8 @@ namespace GameFrame.Main
             m_NetworkChannel = networkChannel;
 
             // 反射注册包和包处理函数。
-            Type packetBaseType = typeof(SCPacketBase);
-            Type packetHandlerBaseType = typeof(PacketHandlerBase);
+            Type packetBaseType = typeof(SCPacketBase);// 服务器下发消息基类
+            Type packetHandlerBaseType = typeof(PacketHandlerBase);// 消息包头基类
             Assembly assembly = Assembly.GetExecutingAssembly();
             Type[] types = assembly.GetTypes();
             for (int i = 0; i < types.Length; i++)
@@ -110,7 +105,7 @@ namespace GameFrame.Main
         /// <returns>是否发送心跳消息包成功。</returns>
         public bool SendHeartBeat()
         {
-            m_NetworkChannel.Send(ReferencePool.Acquire<CSHeartBeat>());
+            //m_NetworkChannel.Send(ReferencePool.Acquire<CSHeartBeat>());
             return true;
         }
 
@@ -123,7 +118,7 @@ namespace GameFrame.Main
         /// <returns>是否序列化成功。</returns>
         public bool Serialize<T>(T packet, Stream destination) where T : Packet
         {
-            PacketBase packetImpl = packet as PacketBase;
+            CSPacketBase packetImpl = packet as CSPacketBase;
             if (packetImpl == null)
             {
                 Log.Warning("Packet is invalid.");
@@ -136,17 +131,27 @@ namespace GameFrame.Main
                 return false;
             }
 
-            m_CachedStream.SetLength(m_CachedStream.Capacity); // 此行防止 Array.Copy 的数据无法写入
-            m_CachedStream.Position = 0L;
+            //m_CachedStream.SetLength(m_CachedStream.Capacity); // 此行防止 Array.Copy 的数据无法写入
+            //m_CachedStream.Position = 0L;
+            //CSPacketHeader packetHeader = ReferencePool.Acquire<CSPacketHeader>();
+            //Serializer.Serialize(m_CachedStream, packetHeader);
+            //ReferencePool.Release(packetHeader);
+            //Serializer.SerializeWithLengthPrefix(m_CachedStream, packet, PrefixStyle.Fixed32);
+            //ReferencePool.Release((IReference)packet);
+            //m_CachedStream.WriteTo(destination);
 
-            CSPacketHeader packetHeader = ReferencePool.Acquire<CSPacketHeader>();
-            Serializer.Serialize(m_CachedStream, packetHeader);
-            ReferencePool.Release(packetHeader);
 
-            Serializer.SerializeWithLengthPrefix(m_CachedStream, packet, PrefixStyle.Fixed32);
+            MessagePacketConverter msg = ReferencePool.Acquire<MessagePacketConverter>();
+            msg.MainType = packetImpl.MainType;
+            msg.SubType = packetImpl.SubType;
+            msg.Content = packetImpl.Content;
+
+            byte[] bytes = msg.Encode();
+
+            ReferencePool.Release(msg);
             ReferencePool.Release((IReference)packet);
 
-            m_CachedStream.WriteTo(destination);
+            destination.Write(bytes, 0, bytes.Length);
             return true;
         }
 
@@ -160,8 +165,20 @@ namespace GameFrame.Main
         {
             // 注意：此函数并不在主线程调用！
             customErrorData = null;
-            return (IPacketHeader)RuntimeTypeModel.Default.Deserialize(source, ReferencePool.Acquire<SCPacketHeader>(), typeof(SCPacketHeader));
-            //return Serializer.DeserializeWithLengthPrefix<SCPacketHeader>(source, PrefixStyle.Fixed32);
+
+            /* 在此函数中消息质保函 Stream source = (| len | 4b)
+             ------------------------------------------------------------
+            | len |*****主消息*****|*****子消息*****|*****附加消息*****|
+              4b          4b              4b             len-12b
+             ------------------------------------------------------------
+             */
+            byte[] data = new byte[source.Length];
+            source.Read(data, (int)source.Position, (int)source.Length);
+            // 长度检测 是否符合要求
+            int msgLen = BitConverter.ToInt32(data, 0);
+            SCPacketHeader packetHeader = ReferencePool.Acquire<SCPacketHeader>();
+            packetHeader.PacketLength = msgLen;
+            return packetHeader;
         }
 
         /// <summary>
@@ -176,7 +193,20 @@ namespace GameFrame.Main
             // 注意：此函数并不在主线程调用！
             customErrorData = null;
 
+            /* 在此函数中消息质保函 Stream source = (|*****主消息*****|*****子消息*****|*****附加消息*****|)
+             ------------------------------------------------------------
+            | len |*****主消息*****|*****子消息*****|*****附加消息*****|
+              4b          4b              4b             len-12b
+             ------------------------------------------------------------
+             */
+
             SCPacketHeader scPacketHeader = packetHeader as SCPacketHeader;
+
+            byte[] data = new byte[packetHeader.PacketLength];
+            source.Read(data, (int)source.Position, (int)source.Length);
+            MessagePacketConverter msg = ReferencePool.Acquire<MessagePacketConverter>();
+            msg.Decode(packetHeader.PacketLength, data);
+
             if (scPacketHeader == null)
             {
                 Log.Warning("Packet header is invalid.");
@@ -184,23 +214,21 @@ namespace GameFrame.Main
             }
 
             Packet packet = null;
-            if (scPacketHeader.IsValid)
+            Type packetType = GetServerToClientPacketType(msg.MainType);
+            if (packetType != null)
             {
-                Type packetType = GetServerToClientPacketType(scPacketHeader.Id);
-                if (packetType != null)
-                {
-                    packet = (Packet)RuntimeTypeModel.Default.DeserializeWithLengthPrefix(source, ReferencePool.Acquire(packetType), packetType, PrefixStyle.Fixed32, 0);
-                }
-                else
-                {
-                    Log.Warning("Can not deserialize packet for packet id '{0}'.", scPacketHeader.Id.ToString());
-                }
+                SCPacketBase msgPack = (SCPacketBase)ReferencePool.Acquire(packetType);
+                msgPack.MainType = msg.MainType;
+                msgPack.SubType = msg.SubType;
+                msgPack.Content = msg.Content;
+                packet = (Packet)msgPack;
             }
             else
             {
-                Log.Warning("Packet header is invalid.");
+                Log.Warning("Can not deserialize packet for packet id '{0}'.", scPacketHeader.Id.ToString());
             }
 
+            ReferencePool.Release(msg);
             ReferencePool.Release(scPacketHeader);
             return packet;
         }

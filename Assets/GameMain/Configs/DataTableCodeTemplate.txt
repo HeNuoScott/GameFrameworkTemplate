@@ -10,6 +10,7 @@
 
 using System.Collections.Generic;
 using UnityGameFramework.Runtime;
+using GameFrame.Main;
 using GameFramework;
 using System.Text;
 using UnityEngine;

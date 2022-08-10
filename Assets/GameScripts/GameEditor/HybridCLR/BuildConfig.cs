@@ -11,7 +11,13 @@ namespace HybridCLR
 {
     public static partial class BuildConfig
     {
-#if !UNITY_IOS
+#if UNITY_WEBGL
+        [InitializeOnLoadMethod]
+        private static void Setup()
+        {
+            Debug.Log("WebGL打包不支持local il2cpp，所以必须将wolong安装到全局位置，并且取消项目内对 UNITY_IL2CPP_PATH 环境变量的设置。");
+        }
+#elif !UNITY_IOS
         [InitializeOnLoadMethod]
         private static void Setup()
         {

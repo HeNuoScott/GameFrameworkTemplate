@@ -5,10 +5,11 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
+using GameFrame.Main;
 using ProtoBuf;
 using System;
 
-namespace GameFrame.Main
+namespace GameFrame.Hotfix
 {
     [Serializable, ProtoContract(Name = @"SCHeartBeat")]
     public class SCHeartBeat : SCPacketBase

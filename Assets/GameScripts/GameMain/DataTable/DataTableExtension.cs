@@ -7,11 +7,10 @@
 
 using UnityGameFramework.Runtime;
 using GameFramework.DataTable;
-using GameFrame.Main;
 using UnityEngine;
 using System;
 
-namespace GameFrame.Hotfix
+namespace GameFrame.Main
 {
     public static class DataTableExtension
     {
