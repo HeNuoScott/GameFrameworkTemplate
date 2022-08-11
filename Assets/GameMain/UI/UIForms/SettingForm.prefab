@@ -1157,7 +1157,7 @@ GameObject:
   m_Component:
   - component: {fileID: 22479072}
   - component: {fileID: 22224364}
-  - component: {fileID: 11469820}
+  - component: {fileID: 2460162979350000883}
   m_Layer: 5
   m_Name: Cancel
   m_TagString: Untagged
@@ -1194,7 +1194,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 113640}
   m_CullTransparentMesh: 1
---- !u!114 &11469820
+--- !u!114 &2460162979350000883
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1203,14 +1203,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 113640}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5079836f95c2a44b96fa331487ebb70, type: 3}
+  m_Script: {fileID: 11500000, guid: ca8ac160a1a0a154c945fdd5faf7a0fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_OnHover:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 11472764}
-        m_TargetAssemblyTypeName: 
+        m_TargetAssemblyTypeName: GameFrame.Hotfix.UGUIForm, GameFrame.Hotfix
         m_MethodName: PlayUISound
         m_Mode: 3
         m_Arguments:
@@ -1225,7 +1225,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 11472764}
-        m_TargetAssemblyTypeName: 
+        m_TargetAssemblyTypeName: GameFrame.Hotfix.UGUIForm, GameFrame.Hotfix
         m_MethodName: PlayUISound
         m_Mode: 3
         m_Arguments:
@@ -1237,7 +1237,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 11472764}
-        m_TargetAssemblyTypeName: 
+        m_TargetAssemblyTypeName: GameFrame.Hotfix.UGUIForm, GameFrame.Hotfix
         m_MethodName: Close
         m_Mode: 1
         m_Arguments:
@@ -1925,7 +1925,7 @@ GameObject:
   m_Component:
   - component: {fileID: 22492126}
   - component: {fileID: 22216270}
-  - component: {fileID: 11482350}
+  - component: {fileID: 2261536077901459101}
   m_Layer: 5
   m_Name: Confirm
   m_TagString: Untagged
@@ -1962,7 +1962,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 123622}
   m_CullTransparentMesh: 1
---- !u!114 &11482350
+--- !u!114 &2261536077901459101
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1971,14 +1971,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 123622}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5079836f95c2a44b96fa331487ebb70, type: 3}
+  m_Script: {fileID: 11500000, guid: ca8ac160a1a0a154c945fdd5faf7a0fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_OnHover:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 11472764}
-        m_TargetAssemblyTypeName: 
+        m_TargetAssemblyTypeName: GameFrame.Hotfix.UGUIForm, GameFrame.Hotfix
         m_MethodName: PlayUISound
         m_Mode: 3
         m_Arguments:
@@ -1993,7 +1993,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 11472764}
-        m_TargetAssemblyTypeName: 
+        m_TargetAssemblyTypeName: GameFrame.Hotfix.UGUIForm, GameFrame.Hotfix
         m_MethodName: PlayUISound
         m_Mode: 3
         m_Arguments:
@@ -2005,7 +2005,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 11472764}
-        m_TargetAssemblyTypeName: 
+        m_TargetAssemblyTypeName: GameFrame.Hotfix.SettingForm, GameFrame.Hotfix
         m_MethodName: OnSubmitButtonClick
         m_Mode: 1
         m_Arguments:

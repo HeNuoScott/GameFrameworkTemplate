@@ -5,12 +5,11 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 // 此文件由工具自动生成，请勿直接修改。
-// 生成时间：2022-08-10 21:33:07.315
+// 生成时间：2022-08-11 21:07:17.141
 //------------------------------------------------------------
 
 using System.Collections.Generic;
 using UnityGameFramework.Runtime;
-using GameFrame.Main;
 using GameFramework;
 using System.Text;
 using UnityEngine;

@@ -588,7 +588,7 @@ GameObject:
   m_Component:
   - component: {fileID: 22463286}
   - component: {fileID: 22267316}
-  - component: {fileID: 11435820}
+  - component: {fileID: 4157135079724640597}
   m_Layer: 5
   m_Name: Confirm
   m_TagString: Untagged
@@ -625,7 +625,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 123252}
   m_CullTransparentMesh: 1
---- !u!114 &11435820
+--- !u!114 &4157135079724640597
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -634,7 +634,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 123252}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5079836f95c2a44b96fa331487ebb70, type: 3}
+  m_Script: {fileID: 11500000, guid: ca8ac160a1a0a154c945fdd5faf7a0fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_OnHover:
@@ -650,7 +650,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 10001
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -952,7 +952,7 @@ GameObject:
   m_Component:
   - component: {fileID: 22489788}
   - component: {fileID: 22259850}
-  - component: {fileID: 11466582}
+  - component: {fileID: 6213224037210848984}
   m_Layer: 5
   m_Name: Cancel
   m_TagString: Untagged
@@ -989,7 +989,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 136914}
   m_CullTransparentMesh: 1
---- !u!114 &11466582
+--- !u!114 &6213224037210848984
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -998,7 +998,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 136914}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5079836f95c2a44b96fa331487ebb70, type: 3}
+  m_Script: {fileID: 11500000, guid: ca8ac160a1a0a154c945fdd5faf7a0fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_OnHover:
@@ -1014,7 +1014,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 10001
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1029,7 +1029,7 @@ GameObject:
   m_Component:
   - component: {fileID: 22469922}
   - component: {fileID: 22236630}
-  - component: {fileID: 11457524}
+  - component: {fileID: 4547702958781787848}
   m_Layer: 5
   m_Name: Other
   m_TagString: Untagged
@@ -1066,7 +1066,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 143604}
   m_CullTransparentMesh: 1
---- !u!114 &11457524
+--- !u!114 &4547702958781787848
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1075,7 +1075,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 143604}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5079836f95c2a44b96fa331487ebb70, type: 3}
+  m_Script: {fileID: 11500000, guid: ca8ac160a1a0a154c945fdd5faf7a0fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_OnHover:
@@ -1091,7 +1091,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 10001
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1448,7 +1448,7 @@ GameObject:
   m_Component:
   - component: {fileID: 22479018}
   - component: {fileID: 22233544}
-  - component: {fileID: 11432982}
+  - component: {fileID: 6109771074312149470}
   m_Layer: 5
   m_Name: Confirm
   m_TagString: Untagged
@@ -1485,7 +1485,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 160574}
   m_CullTransparentMesh: 1
---- !u!114 &11432982
+--- !u!114 &6109771074312149470
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1494,7 +1494,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 160574}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5079836f95c2a44b96fa331487ebb70, type: 3}
+  m_Script: {fileID: 11500000, guid: ca8ac160a1a0a154c945fdd5faf7a0fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_OnHover:
@@ -1510,7 +1510,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 10001
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1604,7 +1604,7 @@ GameObject:
   m_Component:
   - component: {fileID: 22480084}
   - component: {fileID: 22211492}
-  - component: {fileID: 11407892}
+  - component: {fileID: 5088609896727728520}
   m_Layer: 5
   m_Name: Cancel
   m_TagString: Untagged
@@ -1641,7 +1641,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 170828}
   m_CullTransparentMesh: 1
---- !u!114 &11407892
+--- !u!114 &5088609896727728520
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1650,7 +1650,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 170828}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5079836f95c2a44b96fa331487ebb70, type: 3}
+  m_Script: {fileID: 11500000, guid: ca8ac160a1a0a154c945fdd5faf7a0fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_OnHover:
@@ -1666,7 +1666,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 10001
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1878,7 +1878,7 @@ GameObject:
   m_Component:
   - component: {fileID: 22464582}
   - component: {fileID: 22210986}
-  - component: {fileID: 11490228}
+  - component: {fileID: 7363380273426060412}
   m_Layer: 5
   m_Name: Confirm
   m_TagString: Untagged
@@ -1915,7 +1915,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 199146}
   m_CullTransparentMesh: 1
---- !u!114 &11490228
+--- !u!114 &7363380273426060412
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1924,7 +1924,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 199146}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5079836f95c2a44b96fa331487ebb70, type: 3}
+  m_Script: {fileID: 11500000, guid: ca8ac160a1a0a154c945fdd5faf7a0fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_OnHover:
