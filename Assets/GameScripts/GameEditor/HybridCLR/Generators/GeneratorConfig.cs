@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using UnityEngine;
 using UnityGameFramework.Runtime;
 using GameFrame.Main;
-using GameFrame.Hotfix;
 
 namespace HybridCLR.Generators
 {
@@ -59,9 +58,6 @@ namespace HybridCLR.Generators
                 typeof(WebRequestComponent),
                 typeof(BuiltinDataComponent),
                 typeof(Log),
-
-                typeof(Dictionary<KeyValuePair<CampType, CampType>, RelationType>),
-                typeof(Dictionary<KeyValuePair<CampType, RelationType>, CampType[]>),
             };
         }
 
@@ -101,6 +97,7 @@ namespace HybridCLR.Generators
             return new List<string>
             {
                 "vi4i4",
+                "S12i4S12S12",
             };
         }
     }

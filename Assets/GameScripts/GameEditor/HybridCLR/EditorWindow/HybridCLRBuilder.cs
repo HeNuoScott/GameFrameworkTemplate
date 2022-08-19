@@ -64,8 +64,7 @@ namespace HybridCLR.Builder
             GUILayout.Space(5f);
             EditorGUILayout.LabelField("Install HybridCLR：(检查安装与更新)", EditorStyles.boldLabel);
             EditorGUILayout.BeginVertical("box");
-            EditorGUILayout.LabelField("安装HybridCLR需要git和网络。点击Start开始执行命令行，务必检查运行结果，确保输出了success ，而不是其他错误，才表示安装成功。");
-            GUIItem("初始化HybridCLR仓库并安装到到本项目。", "打开本地仓库", OpenHybridCLRLibs);
+            GUIItem("HybridCLR安装到本项目。", "Install", InstallWindow.Open);
             EditorGUILayout.EndVertical();
 
             GUILayout.Space(5f);
@@ -135,20 +134,6 @@ namespace HybridCLR.Builder
                 window.Show();
             }
             EditorGUILayout.EndHorizontal();
-        }
-
-        private void OpenHybridCLRLibs()
-        {
-            var localHuatuoDataDir = Path.GetDirectoryName(Application.dataPath) + "\\HybridCLRData";
-            if (!Directory.Exists(localHuatuoDataDir))
-            {
-                Debug.LogError($"本地il2cpp目录:{localHuatuoDataDir} 不存在，请通过huatuo_trial示例工程导入");
-            }
-            else
-            {
-                Debug.Log($"打开本地仓库：{localHuatuoDataDir}");
-                System.Diagnostics.Process.Start("explorer.exe", localHuatuoDataDir);
-            }
         }
 
         private void CompileHotfixDll()

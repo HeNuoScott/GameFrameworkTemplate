@@ -16,6 +16,7 @@ namespace HybridCLR
         private static void Setup()
         {
             Debug.Log("WebGL打包不支持local il2cpp，所以必须将wolong安装到全局位置，并且取消项目内对 UNITY_IL2CPP_PATH 环境变量的设置。");
+            Environment.SetEnvironmentVariable("UNITY_IL2CPP_PATH", null);
         }
 #elif !UNITY_IOS
         [InitializeOnLoadMethod]
@@ -28,7 +29,7 @@ namespace HybridCLR
             var localIl2cppDir = LocalIl2CppDir;
             if (!Directory.Exists(localIl2cppDir))
             {
-                Debug.LogError($"本地il2cpp目录:{localIl2cppDir} 不存在，未安装本地il2cpp。请手动执行一次 {BuildConfig.HybridCLRDataDir} 目录下的 init_local_il2cpp_data.bat 或者 init_local_il2cpp_data.sh 文件");
+                Debug.LogError($"本地il2cpp目录:{localIl2cppDir} 不存在，未安装本地il2cpp。请在菜单 HybridCLR/Install 中执行安装");
             }
             Environment.SetEnvironmentVariable("UNITY_IL2CPP_PATH", localIl2cppDir);
         }
@@ -52,7 +53,7 @@ namespace HybridCLR
 
         public static string LocalIl2CppDir => $"{HybridCLRDataDir}/LocalIl2CppData/il2cpp";
 
-        public static string MethodBridgeCppDir => $"{LocalIl2CppDir}/libil2cpp/huatuo/interpreter";
+        public static string MethodBridgeCppDir => $"{LocalIl2CppDir}/libil2cpp/hybridclr/interpreter";
 
         public static string Il2CppBuildCacheDir { get; } = $"{ProjectDir}/Library/Il2cppBuildCache";
 

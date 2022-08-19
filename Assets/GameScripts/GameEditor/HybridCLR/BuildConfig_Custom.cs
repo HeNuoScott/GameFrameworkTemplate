@@ -24,7 +24,6 @@ namespace HybridCLR
         public static List<string> MonoHotUpdateDllNames { get; } = new List<string>()
         {
             "GameFrame.Hotfix.dll",
-            "GameFrame.ThirdParty.dll",
         };
 
         /// <summary>

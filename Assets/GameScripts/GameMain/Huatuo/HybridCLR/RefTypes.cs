@@ -7,6 +7,7 @@ using UnityEngine;
 using UnityEngine.Scripting;
 using GameFramework;
 using GameFrame.Main;
+using System.IO;
 
 [assembly: Preserve]
 enum IntEnum : int
@@ -19,7 +20,13 @@ enum ByteEnum : byte
     A,
     B,
 }
-
+public class MyComparer<T> : Comparer<T>
+{
+    public override int Compare(T x, T y)
+    {
+        return 0;
+    }
+}
 struct CampByteEnum
 {
     private readonly ByteEnum m_First;
@@ -55,8 +62,58 @@ public struct MyValue
     public string s;
 }
 
+public class TestData
+{
+    public string name;
+    public int age;
+}
+
+class TestTable
+{
+    public int Id { get; set; }
+
+    public string Name { get; set; }
+}
+
+class MyStateMachine : IAsyncStateMachine
+    {
+        public void MoveNext()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SetStateMachine(IAsyncStateMachine stateMachine)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
 public class RefTypes : MonoBehaviour
 {
+    List<Type> GetTypes()
+    {
+        return new List<Type>
+        {
+        };
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        Debug.Log(GetTypes());
+        GameObject.Instantiate<GameObject>(null);
+        Instantiate<GameObject>(null, null);
+        Instantiate<GameObject>(null, null, false);
+        Instantiate<GameObject>(null, new Vector3(), new Quaternion());
+        Instantiate<GameObject>(null, new Vector3(), new Quaternion(), null);
+    }
+
+    public void RefNumerics()
+    {
+        var a = new System.Numerics.BigInteger();
+        a.ToString();
+    }
+
     // TODO 游戏中使用的泛型
     void RefGame()
     {
@@ -74,6 +131,9 @@ public class RefTypes : MonoBehaviour
         {
             new MyValue() { x = 1, y = 10, s = "abc" }
         };
+        TestData testData = new TestData() { name = "test", age = 1 };
+        string json = Newtonsoft.Json.JsonConvert.SerializeObject(testData);
+        testData = Newtonsoft.Json.JsonConvert.DeserializeObject<TestData>(json);
     }
 
     void RefUnityEngine()
@@ -86,13 +146,6 @@ public class RefTypes : MonoBehaviour
         this.gameObject.AddComponent<RefTypes>();
         gameObject.AddComponent(typeof(RefTypes));
         gameObject.AddComponent(typeof(Animation));
-    }
-
-    void RefNullable()
-    {
-        // nullable
-        int? a = 5;
-        object b = a;
     }
 
     void RefContainer()
@@ -125,22 +178,57 @@ public class RefTypes : MonoBehaviour
         };
     }
 
-    class RefStateMachine : IAsyncStateMachine
+    void RefMisc()
     {
-        public void MoveNext()
-        {
-            throw new NotImplementedException();
-        }
 
-        public void SetStateMachine(IAsyncStateMachine stateMachine)
+    }
+
+    void RefComparers()
+    {
+        var a = new object[]
         {
-            throw new NotImplementedException();
-        }
+            new MyComparer<int>(),
+            new MyComparer<long>(),
+            new MyComparer<float>(),
+            new MyComparer<double>(),
+            new MyComparer<object>(),
+        };
+
+        new MyComparer<int>().Compare(default, default);
+        new MyComparer<long>().Compare(default, default);
+        new MyComparer<float>().Compare(default, default);
+        new MyComparer<double>().Compare(default, default);
+        new MyComparer<object>().Compare(default, default);
+
+        object b = EqualityComparer<int>.Default;
+        b = EqualityComparer<long>.Default;
+        b = EqualityComparer<float>.Default;
+        b = EqualityComparer<double>.Default;
+        b = EqualityComparer<object>.Default;
+    }
+
+    void RefNullable()
+    {
+        // nullable
+        object b = null;
+        int? a = 5;
+        b = a;
+        int d = (int?)b ?? 7;
+        int e = (int)b;
+        a = d;
+        b = a;
+        b = Enumerable.Range(0, 1).Reverse().Take(1).TakeWhile(x => true).Skip(1).All(x => true);
+        b = new WaitForSeconds(1f);
+        b = new WaitForSecondsRealtime(1f);
+        b = new WaitForFixedUpdate();
+        b = new WaitForEndOfFrame();
+        b = new WaitWhile(() => true);
+        b = new WaitUntil(() => true);
     }
 
     void RefAsyncMethod()
     {
-        var stateMachine = new RefStateMachine();
+        var stateMachine = new MyStateMachine();
 
         TaskAwaiter aw = default;
         var c0 = new AsyncTaskMethodBuilder();
@@ -203,5 +291,82 @@ public class RefTypes : MonoBehaviour
         c9.SetException(null);
         c9.SetResult();
         Debug.Log(b);
+    }
+
+    void RefNewtonsoftJson()
+    {
+        //AotHelper.EnsureList<int>();
+        //AotHelper.EnsureList<long>();
+        //AotHelper.EnsureList<float>();
+        //AotHelper.EnsureList<double>();
+        //AotHelper.EnsureList<string>();
+        //AotHelper.EnsureDictionary<int, int>();
+        //AotHelper.EnsureDictionary<int, string>();
+    }
+
+    public void RefProtobufNet()
+    {
+        
+    }
+
+    public void RefGoogleProtobuf()
+    {
+    }
+
+    public void RefSQLite()
+    {
+    }
+
+    public static async void TestAsync3()
+    {
+        Debug.Log("async task 1");
+        await Task.Delay(10);
+        Debug.Log("async task 2");
+    }
+
+    public static int Main_1()
+    {
+        Debug.Log("hello,hybridclr");
+
+        var task = Task.Run(async () =>
+        {
+            await TestAsync2();
+        });
+
+        task.Wait();
+
+        Debug.Log("async task end");
+        Debug.Log("async task end2");
+
+        return 0;
+    }
+
+    public static async Task TestAsync2()
+    {
+        Debug.Log("async task 1");
+        await Task.Delay(3000);
+        Debug.Log("async task 2");
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        TestAsync();
+    }
+
+    public static int TestAsync()
+    {
+        var t0 = Task.Run(async () =>
+        {
+            await Task.Delay(10);
+        });
+        t0.Wait();
+        var task = Task.Run(async () =>
+        {
+            await Task.Delay(10);
+            return 100;
+        });
+        Debug.Log(task.Result);
+        return 0;
     }
 }
