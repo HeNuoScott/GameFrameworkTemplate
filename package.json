@@ -3,8 +3,9 @@
   "displayName": "Game Framework",
   "category": "Game Framework",
   "description": "This is literally a game framework, based on Unity game engine. It encapsulates commonly used game modules during development, and, to a large degree, standardises the process, enhances the development speed and ensures the product quality.",
-  "version": "2021.05.31",
+  "version": "1.0.1",
   "unity": "2017.1",
+  "dev": "2021.05.31",
   "keywords": [
     "Game Framework"
   ],
