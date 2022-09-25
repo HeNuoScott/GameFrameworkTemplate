@@ -1,7 +1,10 @@
 {
   "dependencies": {
+    "com.henuo.gameframework": "https://github.com/HeNuoLibrary/UnityGameFramework.git",
+    "com.henuo.hybridclr_unity": "https://github.com/HeNuoLibrary/hybridclr_unity.git",
+    "com.henuo.loopscrollrect": "https://github.com/HeNuoLibrary/LoopScrollRect.git",
     "com.unity.collab-proxy": "1.15.17",
-    "com.unity.ide.rider": "1.2.1",
+    "com.unity.ide.rider": "3.0.13",
     "com.unity.ide.visualstudio": "2.0.15",
     "com.unity.ide.vscode": "1.2.5",
     "com.unity.nuget.newtonsoft-json": "3.0.2",
@@ -9,7 +12,6 @@
     "com.unity.textmeshpro": "3.0.6",
     "com.unity.timeline": "1.6.4",
     "com.unity.ugui": "1.0.0",
-    "me.qiankanglai.loopscrollrect": "https://github.com/qiankanglai/LoopScrollRect.git",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
     "com.unity.modules.animation": "1.0.0",

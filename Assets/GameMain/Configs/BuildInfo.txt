@@ -1,10 +1,10 @@
 {
   "GameVersion": "0.1.0",
   "InternalGameVersion": 0,
-  "CheckVersionUrl": "http://127.0.0.1:8880/Windows64/version.txt",
-  "WindowsAppUrl": "https://Sirius.gameframework.cn",
-  "MacOSAppUrl": "https://Sirius.gameframework.cn",
-  "IOSAppUrl": "https://Sirius.gameframework.cn",
-  "AndroidAppUrl": "https://Sirius.gameframework.cn",
+  "CheckVersionUrl": "https://starforce.gameframework.cn/Resources/{0}Version.txt",
+  "WindowsAppUrl": "https://starforce.gameframework.cn",
+  "MacOSAppUrl": "https://starforce.gameframework.cn",
+  "IOSAppUrl": "https://starforce.gameframework.cn",
+  "AndroidAppUrl": "https://starforce.gameframework.cn",
   "END_OF_JSON": ""
 }

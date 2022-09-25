@@ -6,31 +6,31 @@ EditorUserSettings:
   serializedVersion: 4
   m_ConfigSettings:
     RecentlyUsedSceneGuid-0:
-      value: 5606515003560c035d5d5c7240200b44154f407d7c29243378281c6be6b13568
-      flags: 0
-    RecentlyUsedSceneGuid-1:
-      value: 5a57055f57005c5f0f0a0870497407441015197e7c2b76367a2d1c32e7e2356f
-      flags: 0
-    RecentlyUsedSceneGuid-2:
-      value: 540255055000580d5d5a5e2340270d44174f4c7e7f7c7e667a7f1c36e3e6373a
-      flags: 0
-    RecentlyUsedSceneGuid-3:
       value: 0702525e55560d590b5a587b49270b444015197b7c7a7066792d1e61e4b4366d
       flags: 0
-    RecentlyUsedSceneGuid-4:
+    RecentlyUsedSceneGuid-1:
       value: 5103075e0705585e0e0b0a7b11200c44454e4a7b742a20687d7a1961e3b06739
       flags: 0
-    RecentlyUsedSceneGuid-5:
+    RecentlyUsedSceneGuid-2:
       value: 5200575304020b0e5a0b582747750e44464f412e7a7f7135757b446ab1e4653c
       flags: 0
-    RecentlyUsedSceneGuid-6:
+    RecentlyUsedSceneGuid-3:
       value: 5a5056055450085f0e5a097b47770e44154f4b782e2e7e342b2d4d32b3e4353b
       flags: 0
-    RecentlyUsedSceneGuid-7:
+    RecentlyUsedSceneGuid-4:
       value: 015305500150585d0b08097713720944404e4e2f2a2d7133782a4e31e0b73069
       flags: 0
-    RecentlyUsedSceneGuid-8:
+    RecentlyUsedSceneGuid-5:
       value: 545404505d060d5d550d5d7013775b4415154f792f707f607f2b1f6be3b53060
+      flags: 0
+    RecentlyUsedSceneGuid-6:
+      value: 0706035f55070c0a585a0d7649710644434f4a7f2e7a75357c7a4462e1b76d61
+      flags: 0
+    RecentlyUsedSceneGuid-7:
+      value: 56070c025d500c0b5808542716755b44444e19292d707636282a4d64e1b0323c
+      flags: 0
+    RecentlyUsedSceneGuid-8:
+      value: 51570d5600510c0e5e5d552740775b441416407e7a2973602c2c1965bab7373c
       flags: 0
     RecentlyUsedSceneGuid-9:
       value: 5a55060250040b5d5d080f7114255c44444e4872297b27672c7f4935b6e6313a
@@ -73,9 +73,13 @@ EditorUserSettings:
   m_VCDebugCmd: 0
   m_VCDebugOut: 0
   m_SemanticMergeMode: 2
+  m_DesiredImportWorkerCount: 4
+  m_StandbyImportWorkerCount: 2
+  m_IdleImportWorkerShutdownDelay: 60000
   m_VCShowFailedCheckout: 1
   m_VCOverwriteFailedCheckoutAssets: 1
   m_VCProjectOverlayIcons: 1
   m_VCHierarchyOverlayIcons: 1
   m_VCOtherOverlayIcons: 1
   m_VCAllowAsyncUpdate: 1
+  m_ArtifactGarbageCollection: 1
